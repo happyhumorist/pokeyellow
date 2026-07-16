@@ -1741,3 +1741,6 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 
 	.include "data/maps/PalletTown_GreensHouse_Y/scripts.inc"
 	.include "data/maps/PalletTown_GreensHouse_Y/text.inc"
+
+	.include "data/maps/PalletTown_RedsHouse_Y/scripts.inc"
+	.include "data/maps/PalletTown_RedsHouse_Y/text.inc"

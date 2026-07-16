@@ -1103,6 +1103,20 @@ PalletTown_EventScript_GreensHouseSign::
 	return
 
 
+PalletTown_EventScript_RedsHouseSign::
+# 558 "data/maps/PalletTown_Frlg/scripts.pory"
+	lockall
+# 559 "data/maps/PalletTown_Frlg/scripts.pory"
+	msgbox PalletTown_EventScript_RedsHouseSign_Text_0
+# 560 "data/maps/PalletTown_Frlg/scripts.pory"
+	releaseall
+	return
+
+
 PalletTown_EventScript_GreensHouseSign_Text_0:
 # 552 "data/maps/PalletTown_Frlg/scripts.pory"
 	.string "Green's House$"
+
+PalletTown_EventScript_RedsHouseSign_Text_0:
+# 559 "data/maps/PalletTown_Frlg/scripts.pory"
+	.string "Red's House$"

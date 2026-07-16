@@ -10217,6 +10217,18 @@
       "secondary_tileset": "gTileset_GenericBuilding2",
       "border_filepath": "data/layouts/PalletTown_GreensHouse_Y/border.bin",
       "blockdata_filepath": "data/layouts/PalletTown_GreensHouse_Y/map.bin"
+    },
+    {
+      "id": "LAYOUT_PALLET_TOWN_REDS_HOUSE_Y",
+      "name": "PalletTown_RedsHouse_Y_Layout",
+      "width": 13,
+      "height": 10,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_BuildingFrlg",
+      "secondary_tileset": "gTileset_GenericBuilding2",
+      "border_filepath": "data/layouts/PalletTown_RedsHouse_Y/border.bin",
+      "blockdata_filepath": "data/layouts/PalletTown_RedsHouse_Y/map.bin"
     }
   ]
 }

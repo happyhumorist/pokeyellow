@@ -552,3 +552,10 @@ script PalletTown_EventScript_GreensHouseSign {
 	msgbox("Green's House")
 	releaseall
 }
+
+
+script PalletTown_EventScript_RedsHouseSign {
+	lockall
+	msgbox("Red's House")
+	releaseall
+}
