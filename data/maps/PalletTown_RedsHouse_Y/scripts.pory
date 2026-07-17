@@ -1,0 +1,61 @@
+mapscripts PalletTown_RedsHouse_Y_MapScripts{}
+
+script PalletTown_Redshouse_Get_Pikachu{
+
+  lockall
+  showmonpic(SPECIES_PIKACHU,10,3)
+  msgbox("Quite a polarized one, ehhh?",MSGBOX_YESNO)
+  if(var(VAR_RESULT)==YES){
+	givemon(SPECIES_PIKACHU,5)
+	if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
+	  playfanfare(MUS_OBTAIN_ITEM)
+	  msgbox("Got Pikachu")
+	  removeobject(2)
+	  setflag(FLAG_0x0AF)
+	  call(NicknamePartyMon)
+	}
+	elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
+	  playfanfare(MUS_OBTAIN_ITEM)
+	  msgbox("Got Pikachu")
+	  removeobject(2)
+	  setflag(FLAG_0x0AF)
+	  call(NicknameBoxMon)
+	}
+	else{
+	  hidemonpic
+	  msgbox("No More Room")
+	}
+  }
+  else{
+	hidemonpic
+	msgbox(Pikachu_NotChosen)
+  }
+  waitmessage
+  releaseall
+  end
+}
+
+script NicknamePartyMon{
+
+  msgbox("Give it a nickname?", MSGBOX_YESNO)
+  hidemonpic
+  if(var(VAR_RESULT) == YES){
+    call(Common_EventScript_GetGiftMonPartySlot)
+	call(Common_EventScript_NameReceivedPartyMon)
+  }
+}
+
+
+text Pikachu_NotChosen{
+  "Too good for Pikachu?"
+}
+
+script NicknameBoxMon{
+
+  msgbox("Give it a nickname?",MSGBOX_YESNO)
+  hidemonpic
+  if(var(VAR_RESULT) == YES){
+    call(Common_EventScript_NameReceivedBoxMon)
+  }
+  call(Common_EventScript_TransferredToPC)
+}
