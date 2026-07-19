@@ -11,14 +11,14 @@ script PalletTown_Redshouse_Get_Pikachu{
 	  playfanfare(MUS_OBTAIN_ITEM)
 	  msgbox("Got Pikachu")
 	  removeobject(2)
-	  setflag(FLAG_0x0AF)
+	  setflag(FLAG_HIDE_PIKACHU_BALL)
 	  call(NicknamePartyMon)
 	}
 	elif(var(VAR_RESULT) == MON_GIVEN_TO_PC){
 	  playfanfare(MUS_OBTAIN_ITEM)
 	  msgbox("Got Pikachu")
 	  removeobject(2)
-	  setflag(FLAG_0x0AF)
+	  setflag(FLAG_HIDE_PIKACHU_BALL)
 	  call(NicknameBoxMon)
 	}
 	else{

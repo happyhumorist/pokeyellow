@@ -46,7 +46,7 @@ PalletTown_Redshouse_Get_Pikachu_5:
 # 13 "data/maps/PalletTown_RedsHouse_Y/scripts.pory"
 	removeobject 2
 # 14 "data/maps/PalletTown_RedsHouse_Y/scripts.pory"
-	setflag FLAG_0x0AF
+	setflag FLAG_HIDE_PIKACHU_BALL
 # 15 "data/maps/PalletTown_RedsHouse_Y/scripts.pory"
 	call NicknamePartyMon
 	goto PalletTown_Redshouse_Get_Pikachu_1
@@ -59,7 +59,7 @@ PalletTown_Redshouse_Get_Pikachu_6:
 # 20 "data/maps/PalletTown_RedsHouse_Y/scripts.pory"
 	removeobject 2
 # 21 "data/maps/PalletTown_RedsHouse_Y/scripts.pory"
-	setflag FLAG_0x0AF
+	setflag FLAG_HIDE_PIKACHU_BALL
 # 22 "data/maps/PalletTown_RedsHouse_Y/scripts.pory"
 	call NicknameBoxMon
 	goto PalletTown_Redshouse_Get_Pikachu_1
