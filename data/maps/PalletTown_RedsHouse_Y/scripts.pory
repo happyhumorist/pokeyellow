@@ -7,6 +7,7 @@ script PalletTown_Redshouse_Get_Pikachu{
   msgbox("Quite a polarized one, ehhh?",MSGBOX_YESNO)
   if(var(VAR_RESULT)==YES){
 	givemon(SPECIES_PIKACHU,5)
+	setvar(VAR_STARTER_MON,2)
 	if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
 	  playfanfare(MUS_OBTAIN_ITEM)
 	  msgbox("Got Pikachu")
