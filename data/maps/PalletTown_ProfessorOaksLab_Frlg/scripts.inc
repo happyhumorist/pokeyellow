@@ -220,7 +220,7 @@ PalletTown_ProfessorOaksLab_ChooseStarterScene::
 	delay 30
 	applymovement LOCALID_OAKS_LAB_RIVAL, PalletTown_ProfessorOaksLab_Movement_RivalReact
 	waitmovement 0
-	msgbox PalletTown_ProfessorOaksLab_Text_RivalNoFairWhatAboutMe
+	@ msgbox PalletTown_ProfessorOaksLab_Text_RivalNoFairWhatAboutMe
 	msgbox PalletTown_ProfessorOaksLab_Text_OakBePatientRival
 	setvar VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 2
 	releaseall
@@ -267,22 +267,24 @@ PalletTown_ProfessorOaksLab_Movement_PlayerWalkUp::
 	walk_up
 	step_end
 
+@ Changed the following sections to call RivalBattle2 instead 
+@ of RivalBattle
 PalletTown_ProfessorOaksLab_EventScript_RivalBattleTriggerLeft::
 	lockall
 	setvar VAR_TEMP_2, 1
-	goto PalletTown_ProfessorOaksLab_EventScript_RivalBattle
+	goto PalletTown_ProfessorOaksLab_EventScript_RivalBattle2
 	end
 
 PalletTown_ProfessorOaksLab_EventScript_RivalBattleTriggerMid::
 	lockall
 	setvar VAR_TEMP_2, 2
-	goto PalletTown_ProfessorOaksLab_EventScript_RivalBattle
+	goto PalletTown_ProfessorOaksLab_EventScript_RivalBattle2
 	end
 
 PalletTown_ProfessorOaksLab_EventScript_RivalBattleTriggerRight::
 	lockall
 	setvar VAR_TEMP_2, 3
-	goto PalletTown_ProfessorOaksLab_EventScript_RivalBattle
+	goto PalletTown_ProfessorOaksLab_EventScript_RivalBattle2
 	end
 
 PalletTown_ProfessorOaksLab_EventScript_RivalBattle::
@@ -300,6 +302,22 @@ PalletTown_ProfessorOaksLab_EventScript_RivalBattle::
 	goto_if_eq VAR_STARTER_MON, 1, PalletTown_ProfessorOaksLab_EventScript_RivalApproachForBattleBulbasaur
 	goto_if_eq VAR_STARTER_MON, 2, PalletTown_ProfessorOaksLab_EventScript_RivalApproachForBattleSquirtle
 	end
+	
+@ Changes Rival Battle Script	
+PalletTown_ProfessorOaksLab_EventScript_RivalBattle2::
+	textcolor NPC_TEXT_COLOR_MALE
+	playbgm MUS_RG_ENCOUNTER_RIVAL, 0
+	applymovement LOCALID_OAKS_LAB_RIVAL, Common_Movement_WalkInPlaceFasterDown
+	waitmovement 0
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp
+	waitmovement 0
+	msgbox PalletTown_ProfessorOaksLab_Text_RivalLetsCheckOutMons
+	closemessage
+	applymovement LOCALID_OAKS_LAB_PROF_OAK, Common_Movement_FaceDown
+	waitmovement 0
+	goto PalletTown_ProfessorOaksLab_EventScript_RivalApproachForBattlePikachu
+	end
+	
 
 @ The scripts for the rival approaching the player for battle are a bit bloated because
 @ both the player and rival can be in 3 different positions, so theres 9 different approaches
@@ -463,6 +481,63 @@ PalletTown_ProfessorOaksLab_Movement_RivalApproachForBattleBulbasaurRight::
 	walk_down
 	walk_down
 	step_end
+
+
+@ New Pikachu Scripts, named differently than the others. This is named
+@ because Player gets Pikachu, not because Rival did.
+PalletTown_ProfessorOaksLab_EventScript_RivalApproachForBattlePikachu::
+	goto_if_eq VAR_TEMP_2, 1, PalletTown_ProfessorOaksLab_EventScript_RivalApproachForBattlePikachuLeft
+	goto_if_eq VAR_TEMP_2, 2, PalletTown_ProfessorOaksLab_EventScript_RivalApproachForBattlePikachuMid
+	goto_if_eq VAR_TEMP_2, 3, PalletTown_ProfessorOaksLab_EventScript_RivalApproachForBattlePikachuRight
+	end
+
+PalletTown_ProfessorOaksLab_EventScript_RivalApproachForBattlePikachuLeft::
+	applymovement LOCALID_OAKS_LAB_RIVAL, PalletTown_ProfessorOaksLab_Movement_RivalApproachForBattlePikachuLeft
+	waitmovement 0
+	goto PalletTown_ProfessorOaksLab_EventScript_RivalBattlePikachu
+	end
+
+PalletTown_ProfessorOaksLab_EventScript_RivalApproachForBattlePikachuMid::
+	applymovement LOCALID_OAKS_LAB_RIVAL, PalletTown_ProfessorOaksLab_Movement_RivalApproachForBattlePikachuMid
+	waitmovement 0
+	goto PalletTown_ProfessorOaksLab_EventScript_RivalBattlePikachu
+	end
+
+PalletTown_ProfessorOaksLab_EventScript_RivalApproachForBattlePikachuRight::
+	applymovement LOCALID_OAKS_LAB_RIVAL, PalletTown_ProfessorOaksLab_Movement_RivalApproachForBattlePikachuRight
+	waitmovement 0
+	goto PalletTown_ProfessorOaksLab_EventScript_RivalBattlePikachu
+	end
+
+PalletTown_ProfessorOaksLab_EventScript_RivalBattlePikachu::
+	trainerbattle_earlyrival TRAINER_RIVAL_OAKS_LAB_SQUIRTLE, RIVAL_BATTLE_TUTORIAL, PalletTown_ProfessorOaksLab_Text_RivalDefeat, Text_RivalVictory
+	goto PalletTown_ProfessorOaksLab_EventScript_EndRivalBattle
+	end
+
+@ Movements need to be worked out
+PalletTown_ProfessorOaksLab_Movement_RivalApproachForBattlePikachuLeft::
+	walk_left
+	walk_left
+	walk_left
+	walk_down
+	walk_down
+	step_end
+
+@ Movements need to be worked out
+PalletTown_ProfessorOaksLab_Movement_RivalApproachForBattlePikachuMid::
+	walk_left
+	walk_left
+	walk_down
+	walk_down
+	step_end
+
+@ Movements need to be worked out
+PalletTown_ProfessorOaksLab_Movement_RivalApproachForBattlePikachuRight::
+	walk_left
+	walk_down
+	walk_down
+	step_end
+@ New Pikachu stuff over
 
 PalletTown_ProfessorOaksLab_EventScript_EndRivalBattle::
 	special HealPlayerParty
@@ -1068,8 +1143,8 @@ PalletTown_ProfessorOaksLab_EventScript_BulbasaurBall::
 	lock
 	faceplayer
 	setvar PLAYER_STARTER_NUM, 0
-	setvar PLAYER_STARTER_SPECIES, SPECIES_PIKACHU
-	setvar RIVAL_STARTER_SPECIES, SPECIES_SQUIRTLE
+	setvar PLAYER_STARTER_SPECIES, SPECIES_BULBASAUR
+	setvar RIVAL_STARTER_SPECIES, SPECIES_CHARMANDER
 	setvar RIVAL_STARTER_ID, LOCALID_CHARMANDER_BALL
 	goto_if_ge VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 3, PalletTown_ProfessorOaksLab_EventScript_LastPokeBall
 	goto_if_eq VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 2, PalletTown_ProfessorOaksLab_EventScript_ConfirmStarterChoice
@@ -1211,8 +1286,8 @@ PalletTown_ProfessorOaksLab_EventScript_SquirtleBall::
 	lock
 	faceplayer
 	setvar PLAYER_STARTER_NUM, 1
-	setvar PLAYER_STARTER_SPECIES, SPECIES_PIKACHU
-	setvar RIVAL_STARTER_SPECIES, SPECIES_SQUIRTLE
+	setvar PLAYER_STARTER_SPECIES, SPECIES_SQUIRTLE
+	setvar RIVAL_STARTER_SPECIES, SPECIES_BULBASAUR
 	setvar RIVAL_STARTER_ID, LOCALID_BULBASAUR_BALL
 	goto_if_ge VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 3, PalletTown_ProfessorOaksLab_EventScript_LastPokeBall
 	goto_if_eq VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 2, PalletTown_ProfessorOaksLab_EventScript_ConfirmStarterChoice
@@ -1224,7 +1299,7 @@ PalletTown_ProfessorOaksLab_EventScript_CharmanderBall::
 	lock
 	faceplayer
 	setvar PLAYER_STARTER_NUM, 2
-	setvar PLAYER_STARTER_SPECIES, SPECIES_PIKACHU
+	setvar PLAYER_STARTER_SPECIES, SPECIES_CHARMANDER
 	setvar RIVAL_STARTER_SPECIES, SPECIES_SQUIRTLE
 	setvar RIVAL_STARTER_ID, LOCALID_SQUIRTLE_BALL
 	goto_if_ge VAR_MAP_SCENE_PALLET_TOWN_PROFESSOR_OAKS_LAB, 3, PalletTown_ProfessorOaksLab_EventScript_LastPokeBall
@@ -1418,9 +1493,16 @@ PalletTown_ProfessorOaksLab_Text_OakChoosingBulbasaur::
 	.string "So, {PLAYER}, you want to go with\n"
 	.string "the GRASS POKéMON BULBASAUR?$"
 
+PalletTown_ProfessorOaksLab_Text_OakChoosingPikachu::
+	.string "PIKACHU!$"
+
 PalletTown_ProfessorOaksLab_Text_OakThisMonIsEnergetic::
 	.string "This POKéMON is really quite\n"
 	.string "energetic!$"
+	
+PalletTown_ProfessorOaksLab_Text_OakThisMonIsShocking::
+	.string "This POKéMON is really quite\n"
+	.string "shocking!$"
 
 PalletTown_ProfessorOaksLab_Text_ReceivedMonFromOak::
 	.string "{PLAYER} received the {STR_VAR_1}\n"
@@ -1654,4 +1736,3 @@ PalletTown_ProfessorOaksLab_Text_RivalIllCompleteThePokedex::
 	.string "I think I'll try looking around\n"
 	.string "ONE ISLAND first…\p"
 	.string "Anyways, I'm outta here!$"
-

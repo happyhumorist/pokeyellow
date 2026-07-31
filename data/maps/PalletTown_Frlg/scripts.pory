@@ -170,12 +170,21 @@ PalletTown_Movement_PlayerWalkToLabFromHouse::
 PalletTown_EventScript_OakTriggerLeft::
 	lockall
 	setvar VAR_TEMP_1, 0
-	goto PalletTown_EventScript_OakTrigger
+	goto PalletTown_EventScript_RivalSlowpoke
 	end
 
 PalletTown_EventScript_OakTriggerRight::
 	lockall
 	setvar VAR_TEMP_1, 1
+    goto PalletTown_EventScript_RivalSlowpoke
+	end
+
+PalletTown_EventScript_RivalSlowpoke::
+	lockall
+	delay 30
+	applymovement LOCALID_PALLET_RIVAL, Common_Movement_FacePlayer
+	msgbox PalletTown_Text_Rival_Gramps
+	delay 30
 	goto PalletTown_EventScript_OakTrigger
 	end
 
@@ -263,6 +272,7 @@ PalletTown_Movement_OakEnterRight::
 	walk_right
 	walk_up
 	walk_up
+	walk_up
 	step_end
 
 	.macro walk_to_lab
@@ -293,6 +303,7 @@ PalletTown_Movement_OakWalkToLabLeft::
 
 PalletTown_Movement_OakWalkToLabRight::
 	walk_down
+	walk_down
 	walk_left
 	walk_to_lab
 	walk_right
@@ -311,6 +322,7 @@ PalletTown_Movement_PlayerWalkToLabLeft::
 	step_end
 
 PalletTown_Movement_PlayerWalkToLabRight::
+	walk_down
 	walk_down
 	walk_down
 	walk_left
@@ -448,6 +460,10 @@ PalletTown_EventScript_SignLadyStartShowSign::
 	call PalletTown_EventScript_SignLadyShowSign
 	release
 	end
+
+PalletTown_Text_Rival_Gramps::
+	.string "{RIVAL}: Hey Slowpoke!\n"
+	.string "Gramps already gave me his best POKéMON!$"
 
 PalletTown_Text_OakDontGoOut::
 	.string "OAK: Hey! Wait!\n"
