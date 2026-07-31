@@ -8,6 +8,8 @@ script PalletTown_Redshouse_Get_Pikachu{
   if(var(VAR_RESULT)==YES){
 	givemon(SPECIES_PIKACHU,5)
 	setvar(VAR_STARTER_MON,2)
+	setflag(FLAG_SYS_POKEMON_GET)
+	
 	if(var(VAR_RESULT) == MON_GIVEN_TO_PARTY){
 	  playfanfare(MUS_OBTAIN_ITEM)
 	  msgbox("Got Pikachu")
