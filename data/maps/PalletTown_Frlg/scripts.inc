@@ -935,220 +935,214 @@ PalletTown_Text_Rival_Gramps::
 # 468 "data/maps/PalletTown_Frlg/scripts.pory"
 PalletTown_Text_OakDontGoOut::
 # 469 "data/maps/PalletTown_Frlg/scripts.pory"
-	.string "OAK: Hey! Wait!\n"
+	.string "OAK: Hey! {PLAYER}! Wait!$"
 # 470 "data/maps/PalletTown_Frlg/scripts.pory"
-	.string "Don't go out!$"
+
 # 471 "data/maps/PalletTown_Frlg/scripts.pory"
 
 # 472 "data/maps/PalletTown_Frlg/scripts.pory"
 PalletTown_Text_OakGrassUnsafeNeedMon::
 # 473 "data/maps/PalletTown_Frlg/scripts.pory"
-	.string "OAK: It's unsafe!\n"
+	.string "OAK: You still need to get your\n"
 # 474 "data/maps/PalletTown_Frlg/scripts.pory"
-	.string "Wild POKéMON live in tall grass!\p"
+	.string "starter POKéMON.\p"
 # 475 "data/maps/PalletTown_Frlg/scripts.pory"
-	.string "You need your own POKéMON for\n"
+	.string "Here, come with me.$"
 # 476 "data/maps/PalletTown_Frlg/scripts.pory"
-	.string "your protection.\p"
+
 # 477 "data/maps/PalletTown_Frlg/scripts.pory"
-	.string "I know!\n"
-# 478 "data/maps/PalletTown_Frlg/scripts.pory"
-	.string "Here, come with me!$"
-# 479 "data/maps/PalletTown_Frlg/scripts.pory"
-
-# 480 "data/maps/PalletTown_Frlg/scripts.pory"
 PalletTown_Text_RaisingMonsToo::
-# 481 "data/maps/PalletTown_Frlg/scripts.pory"
+# 478 "data/maps/PalletTown_Frlg/scripts.pory"
 	.string "I'm raising POKéMON, too.\p"
-# 482 "data/maps/PalletTown_Frlg/scripts.pory"
+# 479 "data/maps/PalletTown_Frlg/scripts.pory"
 	.string "When they get strong, they can\n"
-# 483 "data/maps/PalletTown_Frlg/scripts.pory"
+# 480 "data/maps/PalletTown_Frlg/scripts.pory"
 	.string "protect me.$"
-# 484 "data/maps/PalletTown_Frlg/scripts.pory"
+# 481 "data/maps/PalletTown_Frlg/scripts.pory"
 
-# 485 "data/maps/PalletTown_Frlg/scripts.pory"
+# 482 "data/maps/PalletTown_Frlg/scripts.pory"
 PalletTown_Text_CanStoreItemsAndMonsInPC::
-# 486 "data/maps/PalletTown_Frlg/scripts.pory"
+# 483 "data/maps/PalletTown_Frlg/scripts.pory"
 	.string "Technology is incredible!\p"
-# 487 "data/maps/PalletTown_Frlg/scripts.pory"
+# 484 "data/maps/PalletTown_Frlg/scripts.pory"
 	.string "You can now store and recall items\n"
-# 488 "data/maps/PalletTown_Frlg/scripts.pory"
+# 485 "data/maps/PalletTown_Frlg/scripts.pory"
 	.string "and POKéMON as data via PC.$"
+# 486 "data/maps/PalletTown_Frlg/scripts.pory"
+
+# 487 "data/maps/PalletTown_Frlg/scripts.pory"
+PalletTown_Text_OakPokemonResearchLab::
+# 488 "data/maps/PalletTown_Frlg/scripts.pory"
+	.string "OAK POKéMON RESEARCH LAB$"
 # 489 "data/maps/PalletTown_Frlg/scripts.pory"
 
 # 490 "data/maps/PalletTown_Frlg/scripts.pory"
-PalletTown_Text_OakPokemonResearchLab::
+PalletTown_Text_PlayersHouse::
 # 491 "data/maps/PalletTown_Frlg/scripts.pory"
-	.string "OAK POKéMON RESEARCH LAB$"
+	.string "{PLAYER}'s house$"
 # 492 "data/maps/PalletTown_Frlg/scripts.pory"
 
 # 493 "data/maps/PalletTown_Frlg/scripts.pory"
-PalletTown_Text_PlayersHouse::
+PalletTown_Text_RivalsHouse::
 # 494 "data/maps/PalletTown_Frlg/scripts.pory"
-	.string "{PLAYER}'s house$"
+	.string "{RIVAL}'s house$"
 # 495 "data/maps/PalletTown_Frlg/scripts.pory"
 
 # 496 "data/maps/PalletTown_Frlg/scripts.pory"
-PalletTown_Text_RivalsHouse::
-# 497 "data/maps/PalletTown_Frlg/scripts.pory"
-	.string "{RIVAL}'s house$"
-# 498 "data/maps/PalletTown_Frlg/scripts.pory"
-
-# 499 "data/maps/PalletTown_Frlg/scripts.pory"
 PalletTown_Text_TownSign::
-# 500 "data/maps/PalletTown_Frlg/scripts.pory"
+# 497 "data/maps/PalletTown_Frlg/scripts.pory"
 	.string "PALLET TOWN\n"
-# 501 "data/maps/PalletTown_Frlg/scripts.pory"
+# 498 "data/maps/PalletTown_Frlg/scripts.pory"
 	.string "Shades of your journey await!$"
-# 502 "data/maps/PalletTown_Frlg/scripts.pory"
+# 499 "data/maps/PalletTown_Frlg/scripts.pory"
 
-# 503 "data/maps/PalletTown_Frlg/scripts.pory"
+# 500 "data/maps/PalletTown_Frlg/scripts.pory"
 PalletTown_Text_OakLetMeSeePokedex::
-# 504 "data/maps/PalletTown_Frlg/scripts.pory"
+# 501 "data/maps/PalletTown_Frlg/scripts.pory"
 	.string "OAK: Ah, {PLAYER}!\n"
-# 505 "data/maps/PalletTown_Frlg/scripts.pory"
+# 502 "data/maps/PalletTown_Frlg/scripts.pory"
 	.string "You're back, are you?\p"
-# 506 "data/maps/PalletTown_Frlg/scripts.pory"
+# 503 "data/maps/PalletTown_Frlg/scripts.pory"
 	.string "How much have you filled in your\n"
-# 507 "data/maps/PalletTown_Frlg/scripts.pory"
+# 504 "data/maps/PalletTown_Frlg/scripts.pory"
 	.string "POKéDEX?\p"
-# 508 "data/maps/PalletTown_Frlg/scripts.pory"
+# 505 "data/maps/PalletTown_Frlg/scripts.pory"
 	.string "May I see it?\p"
-# 509 "data/maps/PalletTown_Frlg/scripts.pory"
+# 506 "data/maps/PalletTown_Frlg/scripts.pory"
 	.string "Let's see…$"
-# 510 "data/maps/PalletTown_Frlg/scripts.pory"
+# 507 "data/maps/PalletTown_Frlg/scripts.pory"
 
-# 511 "data/maps/PalletTown_Frlg/scripts.pory"
+# 508 "data/maps/PalletTown_Frlg/scripts.pory"
 PalletTown_Text_CaughtXPuttingInHonestEffort::
-# 512 "data/maps/PalletTown_Frlg/scripts.pory"
+# 509 "data/maps/PalletTown_Frlg/scripts.pory"
 	.string "You've caught {STR_VAR_2}…\p"
-# 513 "data/maps/PalletTown_Frlg/scripts.pory"
+# 510 "data/maps/PalletTown_Frlg/scripts.pory"
 	.string "Hm, it looks as if you're putting\n"
-# 514 "data/maps/PalletTown_Frlg/scripts.pory"
+# 511 "data/maps/PalletTown_Frlg/scripts.pory"
 	.string "in an honest effort.\p"
-# 515 "data/maps/PalletTown_Frlg/scripts.pory"
+# 512 "data/maps/PalletTown_Frlg/scripts.pory"
 	.string "When you manage to fill it some\n"
-# 516 "data/maps/PalletTown_Frlg/scripts.pory"
+# 513 "data/maps/PalletTown_Frlg/scripts.pory"
 	.string "more, come show me, please.$"
-# 517 "data/maps/PalletTown_Frlg/scripts.pory"
+# 514 "data/maps/PalletTown_Frlg/scripts.pory"
 
-# 518 "data/maps/PalletTown_Frlg/scripts.pory"
+# 515 "data/maps/PalletTown_Frlg/scripts.pory"
 PalletTown_Text_CaughtXImpressiveFollowMe::
-# 519 "data/maps/PalletTown_Frlg/scripts.pory"
+# 516 "data/maps/PalletTown_Frlg/scripts.pory"
 	.string "You've caught… {STR_VAR_2}!?\n"
-# 520 "data/maps/PalletTown_Frlg/scripts.pory"
+# 517 "data/maps/PalletTown_Frlg/scripts.pory"
 	.string "Now, this is impressive!\p"
-# 521 "data/maps/PalletTown_Frlg/scripts.pory"
+# 518 "data/maps/PalletTown_Frlg/scripts.pory"
 	.string "There's something I wanted to ask\n"
-# 522 "data/maps/PalletTown_Frlg/scripts.pory"
+# 519 "data/maps/PalletTown_Frlg/scripts.pory"
 	.string "of you, {PLAYER}.\p"
-# 523 "data/maps/PalletTown_Frlg/scripts.pory"
+# 520 "data/maps/PalletTown_Frlg/scripts.pory"
 	.string "Come.\n"
-# 524 "data/maps/PalletTown_Frlg/scripts.pory"
+# 521 "data/maps/PalletTown_Frlg/scripts.pory"
 	.string "Follow me.$"
-# 525 "data/maps/PalletTown_Frlg/scripts.pory"
+# 522 "data/maps/PalletTown_Frlg/scripts.pory"
 
-# 526 "data/maps/PalletTown_Frlg/scripts.pory"
+# 523 "data/maps/PalletTown_Frlg/scripts.pory"
 PalletTown_Text_OakYouEnjoyingTraveling::
-# 527 "data/maps/PalletTown_Frlg/scripts.pory"
+# 524 "data/maps/PalletTown_Frlg/scripts.pory"
 	.string "OAK: Ah, {PLAYER}!\n"
-# 528 "data/maps/PalletTown_Frlg/scripts.pory"
+# 525 "data/maps/PalletTown_Frlg/scripts.pory"
 	.string "You seem to be enjoying traveling.\p"
-# 529 "data/maps/PalletTown_Frlg/scripts.pory"
+# 526 "data/maps/PalletTown_Frlg/scripts.pory"
 	.string "Knowing you, {PLAYER}, I can easily\n"
-# 530 "data/maps/PalletTown_Frlg/scripts.pory"
+# 527 "data/maps/PalletTown_Frlg/scripts.pory"
 	.string "imagine you going out to even more\l"
-# 531 "data/maps/PalletTown_Frlg/scripts.pory"
+# 528 "data/maps/PalletTown_Frlg/scripts.pory"
 	.string "exotic locales.\p"
-# 532 "data/maps/PalletTown_Frlg/scripts.pory"
+# 529 "data/maps/PalletTown_Frlg/scripts.pory"
 	.string "Good for you, good for you.\n"
-# 533 "data/maps/PalletTown_Frlg/scripts.pory"
+# 530 "data/maps/PalletTown_Frlg/scripts.pory"
 	.string "Hohoho.$"
-# 534 "data/maps/PalletTown_Frlg/scripts.pory"
+# 531 "data/maps/PalletTown_Frlg/scripts.pory"
 
-# 535 "data/maps/PalletTown_Frlg/scripts.pory"
+# 532 "data/maps/PalletTown_Frlg/scripts.pory"
 @ For the NPC in Pallet Town that talks about the Trainer Tips sign
-# 536 "data/maps/PalletTown_Frlg/scripts.pory"
+# 533 "data/maps/PalletTown_Frlg/scripts.pory"
 PalletTown_Text_HmmIsThatRight::
-# 537 "data/maps/PalletTown_Frlg/scripts.pory"
+# 534 "data/maps/PalletTown_Frlg/scripts.pory"
 	.string "Hmm…\n"
-# 538 "data/maps/PalletTown_Frlg/scripts.pory"
+# 535 "data/maps/PalletTown_Frlg/scripts.pory"
 	.string "Is that right…$"
-# 539 "data/maps/PalletTown_Frlg/scripts.pory"
+# 536 "data/maps/PalletTown_Frlg/scripts.pory"
 
-# 540 "data/maps/PalletTown_Frlg/scripts.pory"
+# 537 "data/maps/PalletTown_Frlg/scripts.pory"
 PalletTown_Text_OhLookLook::
-# 541 "data/maps/PalletTown_Frlg/scripts.pory"
+# 538 "data/maps/PalletTown_Frlg/scripts.pory"
 	.string "Oh!\n"
-# 542 "data/maps/PalletTown_Frlg/scripts.pory"
+# 539 "data/maps/PalletTown_Frlg/scripts.pory"
 	.string "Look, look!$"
+# 540 "data/maps/PalletTown_Frlg/scripts.pory"
+
+# 541 "data/maps/PalletTown_Frlg/scripts.pory"
+PalletTown_Text_ReadItReadIt::
+# 542 "data/maps/PalletTown_Frlg/scripts.pory"
+	.string "Read it, read it!$"
 # 543 "data/maps/PalletTown_Frlg/scripts.pory"
 
 # 544 "data/maps/PalletTown_Frlg/scripts.pory"
-PalletTown_Text_ReadItReadIt::
-# 545 "data/maps/PalletTown_Frlg/scripts.pory"
-	.string "Read it, read it!$"
-# 546 "data/maps/PalletTown_Frlg/scripts.pory"
-
-# 547 "data/maps/PalletTown_Frlg/scripts.pory"
 @ Used by sign
-# 548 "data/maps/PalletTown_Frlg/scripts.pory"
+# 545 "data/maps/PalletTown_Frlg/scripts.pory"
 PalletTown_Text_PressStartToOpenMenu::
-# 549 "data/maps/PalletTown_Frlg/scripts.pory"
+# 546 "data/maps/PalletTown_Frlg/scripts.pory"
 	.string "TRAINER TIPS\p"
-# 550 "data/maps/PalletTown_Frlg/scripts.pory"
+# 547 "data/maps/PalletTown_Frlg/scripts.pory"
 	.string "Press START to open the MENU!$"
+# 548 "data/maps/PalletTown_Frlg/scripts.pory"
+
+# 549 "data/maps/PalletTown_Frlg/scripts.pory"
+PalletTown_Text_SignsAreUsefulArentThey::
+# 550 "data/maps/PalletTown_Frlg/scripts.pory"
+	.string "Signs are useful, aren't they?$"
 # 551 "data/maps/PalletTown_Frlg/scripts.pory"
 
 # 552 "data/maps/PalletTown_Frlg/scripts.pory"
-PalletTown_Text_SignsAreUsefulArentThey::
-# 553 "data/maps/PalletTown_Frlg/scripts.pory"
-	.string "Signs are useful, aren't they?$"
-# 554 "data/maps/PalletTown_Frlg/scripts.pory"
-
-# 555 "data/maps/PalletTown_Frlg/scripts.pory"
 PalletTown_Text_LookCopiedTrainerTipsSign::
-# 556 "data/maps/PalletTown_Frlg/scripts.pory"
+# 553 "data/maps/PalletTown_Frlg/scripts.pory"
 	.string "Look, look!\p"
-# 557 "data/maps/PalletTown_Frlg/scripts.pory"
+# 554 "data/maps/PalletTown_Frlg/scripts.pory"
 	.string "I copied what it said on one of\n"
-# 558 "data/maps/PalletTown_Frlg/scripts.pory"
+# 555 "data/maps/PalletTown_Frlg/scripts.pory"
 	.string "those TRAINER TIPS signs!$"
-# 559 "data/maps/PalletTown_Frlg/scripts.pory"
+# 556 "data/maps/PalletTown_Frlg/scripts.pory"
 
-# 560 "data/maps/PalletTown_Frlg/scripts.pory"
+# 557 "data/maps/PalletTown_Frlg/scripts.pory"
 @ Used by NPC
-# 561 "data/maps/PalletTown_Frlg/scripts.pory"
+# 558 "data/maps/PalletTown_Frlg/scripts.pory"
 PalletTown_Text_PressStartToOpenMenuCopy::
-# 562 "data/maps/PalletTown_Frlg/scripts.pory"
+# 559 "data/maps/PalletTown_Frlg/scripts.pory"
 	.string "TRAINER TIPS!\p"
-# 563 "data/maps/PalletTown_Frlg/scripts.pory"
+# 560 "data/maps/PalletTown_Frlg/scripts.pory"
 	.string "Press START to open the MENU!$"
 
 PalletTown_EventScript_GreensHouseSign::
-# 567 "data/maps/PalletTown_Frlg/scripts.pory"
+# 564 "data/maps/PalletTown_Frlg/scripts.pory"
 	lockall
-# 568 "data/maps/PalletTown_Frlg/scripts.pory"
+# 565 "data/maps/PalletTown_Frlg/scripts.pory"
 	msgbox PalletTown_EventScript_GreensHouseSign_Text_0
-# 569 "data/maps/PalletTown_Frlg/scripts.pory"
+# 566 "data/maps/PalletTown_Frlg/scripts.pory"
 	releaseall
 	return
 
 
 PalletTown_EventScript_RedsHouseSign::
-# 574 "data/maps/PalletTown_Frlg/scripts.pory"
+# 571 "data/maps/PalletTown_Frlg/scripts.pory"
 	lockall
-# 575 "data/maps/PalletTown_Frlg/scripts.pory"
+# 572 "data/maps/PalletTown_Frlg/scripts.pory"
 	msgbox PalletTown_EventScript_RedsHouseSign_Text_0
-# 576 "data/maps/PalletTown_Frlg/scripts.pory"
+# 573 "data/maps/PalletTown_Frlg/scripts.pory"
 	releaseall
 	return
 
 
 PalletTown_EventScript_GreensHouseSign_Text_0:
-# 568 "data/maps/PalletTown_Frlg/scripts.pory"
+# 565 "data/maps/PalletTown_Frlg/scripts.pory"
 	.string "Green's House$"
 
 PalletTown_EventScript_RedsHouseSign_Text_0:
-# 575 "data/maps/PalletTown_Frlg/scripts.pory"
+# 572 "data/maps/PalletTown_Frlg/scripts.pory"
 	.string "Red's House$"
