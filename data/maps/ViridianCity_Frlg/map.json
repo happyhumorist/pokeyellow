@@ -93,8 +93,8 @@
       "local_id": "LOCALID_VIRIDIAN_WOMAN",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_3_FRLG",
-      "x": 20,
-      "y": 12,
+      "x": 24,
+      "y": 14,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",
       "movement_range_x": 1,
@@ -160,6 +160,51 @@
       "trainer_sight_or_berry_tree_id": "0",
       "script": "ViridianCity_EventScript_ItemPotion",
       "flag": "FLAG_HIDE_VIRIDIAN_CITY_POTION"
+    },
+    {
+      "local_id": "LOCALID_VIRIDIAN_MEOWTH",
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_VAR_7",
+      "x": 20,
+      "y": 11,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ViridianCity_EventScript_TeamRocket",
+      "flag": "FLAG_HIDE_TR_VIRIDIAN"
+    },
+    {
+      "local_id": "LOCALID_VIRIDIAN_JAMES",
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_VAR_8",
+      "x": 21,
+      "y": 11,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ViridianCity_EventScript_TeamRocket",
+      "flag": "FLAG_HIDE_TR_VIRIDIAN"
+    },
+    {
+      "local_id": "LOCALID_VIRIDIAN_JESSIE",
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_VAR_9",
+      "x": 22,
+      "y": 11,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ViridianCity_EventScript_TeamRocket",
+      "flag": "FLAG_HIDE_TR_VIRIDIAN"
     }
   ],
   "warp_events": [
@@ -202,7 +247,7 @@
   "coord_events": [
     {
       "type": "trigger",
-      "x": 22,
+      "x": 15,
       "y": 11,
       "elevation": 3,
       "var": "VAR_MAP_SCENE_VIRIDIAN_CITY_OLD_MAN",
@@ -220,7 +265,7 @@
     },
     {
       "type": "trigger",
-      "x": 20,
+      "x": 16,
       "y": 8,
       "elevation": 3,
       "var": "VAR_MAP_SCENE_VIRIDIAN_CITY_OLD_MAN",
@@ -229,7 +274,7 @@
     },
     {
       "type": "trigger",
-      "x": 22,
+      "x": 17,
       "y": 8,
       "elevation": 3,
       "var": "VAR_MAP_SCENE_VIRIDIAN_CITY_OLD_MAN",
