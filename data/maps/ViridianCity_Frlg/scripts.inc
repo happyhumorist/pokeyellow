@@ -390,12 +390,12 @@ ViridianCity_EventScript_TR_Go_Away::
 ViridianCity_EventScript_TR_Battle::
 	lock
 	faceplayer
-	message ViridianCity_Text_Go_Away_Twerp
+	message ViridianCity_Text_TeamRocket_Intro
 	waitmessage
 	playbgm MUS_RG_ENCOUNTER_ROCKET, 0
 	waitbuttonpress
-	trainerbattle_no_intro TRAINER_VIRIDIAN_ROCKETS ViridianCity_Text_Go_Away_Twerp
-	msgbox ViridianCity_Text_Go_Away_Twerp
+	trainerbattle_no_intro TRAINER_VIRIDIAN_ROCKETS ViridianCity_Text_TeamRocket_Filler
+	msgbox ViridianCity_Text_TeamRocket_Filler
 	closemessage
 	fadescreen FADE_TO_BLACK
 	removeobject LOCALID_VIRIDIAN_JESSIE
@@ -409,4 +409,15 @@ ViridianCity_EventScript_TR_Battle::
 	
 	
 ViridianCity_Text_Go_Away_Twerp::
-	.string "Go away twerp$"
+	.string "Go away twerp!$"
+	
+ViridianCity_Text_TeamRocket_Intro::
+	.string "Jessie!\n"
+	.string "James!\p"
+	.string "Team Rocket, Blast off at the\n" 
+	.string "speed of light!\p"
+	.string "Surrender now, or prepare to fight!\n"
+	.string "MEOWTH, dat's right!$"
+	
+ViridianCity_Text_TeamRocket_Filler::
+	.string "PLACEHOLDER!$"
