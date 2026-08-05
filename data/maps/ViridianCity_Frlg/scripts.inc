@@ -4,25 +4,24 @@ ViridianCity_Frlg_MapScripts::
 
 ViridianCity_OnTransition::
 	setworldmapflag FLAG_WORLD_MAP_VIRIDIAN_CITY
-	@ call_if_eq VAR_MAP_SCENE_VIRIDIAN_CITY_OLD_MAN, 0, ViridianCity_EventScript_SetOldManBlockingRoad
-	call_if_eq VAR_MAP_SCENE_VIRIDIAN_CITY_OLD_MAN, 0, ViridianCity_EventScript_SetTeamRocketBlockingRoad
+	call_if_eq VAR_MAP_SCENE_VIRIDIAN_CITY_OLD_MAN, 0, ViridianCity_EventScript_SetOldManStandingByRoad
 	call_if_eq VAR_MAP_SCENE_VIRIDIAN_CITY_OLD_MAN, 1, ViridianCity_EventScript_SetOldManStandingByRoad
 	call_if_ge VAR_MAP_SCENE_VIRIDIAN_CITY_OLD_MAN, 2, ViridianCity_EventScript_SetOldManNormal
 	call_if_eq VAR_MAP_SCENE_VIRIDIAN_CITY_GYM_DOOR, 0, ViridianCity_EventScript_TryUnlockGym
 	end
 
 ViridianCity_EventScript_SetOldManNormal::
-	setvar OBJ_EVENT_GFX_VAR_0, OBJ_EVENT_GFX_OLD_MAN_1
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_OLD_MAN_1
 	return
 
 ViridianCity_EventScript_SetOldManStandingByRoad::
-	setvar OBJ_EVENT_GFX_VAR_0, OBJ_EVENT_GFX_OLD_MAN_1
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_OLD_MAN_1
 	setobjectxyperm LOCALID_TUTORIAL_MAN, 21, 8
 	setobjectmovementtype LOCALID_TUTORIAL_MAN, MOVEMENT_TYPE_LOOK_AROUND
 	return
 
 ViridianCity_EventScript_SetOldManBlockingRoad::
-	setvar OBJ_EVENT_GFX_VAR_0, OBJ_EVENT_GFX_OLD_MAN_LYING_DOWN
+	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_OLD_MAN_LYING_DOWN
 	setobjectxyperm LOCALID_TUTORIAL_MAN, 21, 11
 	setobjectmovementtype LOCALID_TUTORIAL_MAN, MOVEMENT_TYPE_FACE_DOWN
 	return
@@ -357,21 +356,8 @@ ViridianCity_Text_GymSign::
 
 ViridianCity_Text_GymDoorsAreLocked::
 	.string "VIRIDIAN GYM's doors are locked…$"
+	
 
-ViridianCity_EventScript_SetTeamRocketBlockingRoad::
-	setvar OBJ_EVENT_GFX_VAR_9, OBJ_EVENT_GFX_ROCKET_F
-	setobjectxyperm LOCALID_VIRIDIAN_JESSIE, 22, 11
-	setobjectmovementtype LOCALID_VIRIDIAN_JESSIE, MOVEMENT_TYPE_FACE_DOWN
-	
-	setvar OBJ_EVENT_GFX_VAR_8, OBJ_EVENT_GFX_ROCKET_M
-	setobjectxyperm LOCALID_VIRIDIAN_JAMES, 21, 11
-	setobjectmovementtype LOCALID_VIRIDIAN_JAMES, MOVEMENT_TYPE_FACE_DOWN
-	
-	setvar OBJ_EVENT_GFX_VAR_7, OBJ_EVENT_GFX_MEOWTH
-	setobjectxyperm LOCALID_VIRIDIAN_MEOWTH, 20, 11
-	setobjectmovementtype LOCALID_VIRIDIAN_MEOWTH, MOVEMENT_TYPE_FACE_DOWN
-	
-	return
 	
 ViridianCity_EventScript_TeamRocket::
 	lock
@@ -401,11 +387,11 @@ ViridianCity_EventScript_TR_Battle::
 	removeobject LOCALID_VIRIDIAN_JESSIE
 	removeobject LOCALID_VIRIDIAN_JAMES
 	removeobject LOCALID_VIRIDIAN_MEOWTH
+	setflag FLAG_HIDE_VIRIDIAN_TR
 	delay 60
 	fadescreen FADE_FROM_BLACK
 	releaseall
 	end
-	
 	
 	
 ViridianCity_Text_Go_Away_Twerp::
