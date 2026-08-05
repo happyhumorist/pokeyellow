@@ -166,7 +166,7 @@ ViridianCity_EventScript_YoungsterDeclineExplanation::
 ViridianCity_EventScript_Woman::
 	lock
 	faceplayer
-	goto_if_eq VAR_MAP_SCENE_VIRIDIAN_CITY_OLD_MAN, 0, ViridianCity_EventScript_WomanRoadBlocked
+	@ goto_if_eq VAR_MAP_SCENE_VIRIDIAN_CITY_OLD_MAN, 0, ViridianCity_EventScript_WomanRoadBlocked
 	msgbox ViridianCity_Text_GoShoppingInPewterOccasionally
 	release
 	end
@@ -276,8 +276,8 @@ ViridianCity_Text_ThisIsPrivateProperty::
 	.string "This is private property!$"
 
 ViridianCity_Text_ShowYouHowToCatchMons::
-	.string "Well, now, I've had my coffee, and\n"
-	.string "that's what I need to get going!\p"
+	.string "Thanks for taking care of those\n"
+	.string "ruffians.\p"
 	.string "Hm?\n"
 	.string "What is that red box you have?\p"
 	.string "Ah, so you're working on your\n"
@@ -380,8 +380,8 @@ ViridianCity_EventScript_TR_Battle::
 	waitmessage
 	playbgm MUS_RG_ENCOUNTER_ROCKET, 0
 	waitbuttonpress
-	trainerbattle_no_intro TRAINER_VIRIDIAN_ROCKETS ViridianCity_Text_TeamRocket_Filler
-	msgbox ViridianCity_Text_TeamRocket_Filler
+	trainerbattle_no_intro TRAINER_VIRIDIAN_ROCKETS ViridianCity_Text_TeamRocket_Defeat
+	msgbox ViridianCity_Text_TeamRocket_Boss
 	closemessage
 	fadescreen FADE_TO_BLACK
 	removeobject LOCALID_VIRIDIAN_JESSIE
@@ -395,7 +395,8 @@ ViridianCity_EventScript_TR_Battle::
 	
 	
 ViridianCity_Text_Go_Away_Twerp::
-	.string "Go away twerp!$"
+	.string "Go away twerp!\n"
+	.string "We're after valuable POKéMON!$"
 	
 ViridianCity_Text_TeamRocket_Intro::
 	.string "Jessie!\n"
@@ -405,5 +406,9 @@ ViridianCity_Text_TeamRocket_Intro::
 	.string "Surrender now, or prepare to fight!\n"
 	.string "MEOWTH, dat's right!$"
 	
-ViridianCity_Text_TeamRocket_Filler::
-	.string "PLACEHOLDER!$"
+ViridianCity_Text_TeamRocket_Defeat::
+	.string "UH-OH! MEOWTH?!$"
+	
+ViridianCity_Text_TeamRocket_Boss::
+	.string "The boss'll want to know about\n"
+	.string "that twerps strong POKéMON!$"

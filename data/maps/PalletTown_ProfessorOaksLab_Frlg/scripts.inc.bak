@@ -1454,7 +1454,8 @@ PalletTown_ProfessorOaksLab_Text_RivalTellSisNotToGiveYouMap::
 
 PalletTown_ProfessorOaksLab_Text_OakThreeMonsChooseOne::
 	.string "Here, {PLAYER}.\n"
-	.string "The others already got their POKéMON.$"
+	.string "The others already got their POKéMON.\l"
+	.string "This is the only one I have left.$"
 
 
 PalletTown_ProfessorOaksLab_Text_OakBePatientRival::
