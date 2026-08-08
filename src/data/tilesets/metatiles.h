@@ -408,9 +408,3 @@ const u16 gMetatiles_HallOfFame[] = INCBIN_U16("data/tilesets/secondary/hall_of_
 const u16 gMetatileAttributes_HallOfFame[] = INCBIN_U16("data/tilesets/secondary/hall_of_fame_frlg/metatile_attributes.bin");
 
 #endif // IS_FRLG
-
-const u16 gMetatiles_ViridianForest2[] = INCBIN_U16("data/tilesets/secondary/viridian_forest_2/metatiles.bin");
-const u32 gMetatileAttributes_ViridianForest2[] = INCBIN_U32("data/tilesets/secondary/viridian_forest_2/metatile_attributes.bin");
-
-const u16 gMetatiles_Forest[] = INCBIN_U16("data/tilesets/primary/forest/metatiles.bin");
-const u32 gMetatileAttributes_Forest[] = INCBIN_U32("data/tilesets/primary/forest/metatile_attributes.bin");
