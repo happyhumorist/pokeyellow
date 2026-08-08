@@ -228,7 +228,7 @@ ViridianCity_EventScript_DoTutorialBattle::
 	faceplayer
 	msgbox ViridianCity_Text_ThatWasEducationalTakeThis
 	setvar VAR_MAP_SCENE_VIRIDIAN_CITY_OLD_MAN, 2
-	giveitem ITEM_TEACHY_TV
+	giveitem ITEM_WAILMER_PAIL
 	msgbox ViridianCity_Text_WatchThatToLearnBasics
 	return
 

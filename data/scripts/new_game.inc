@@ -275,6 +275,14 @@ EventScript_ResetAllMapFlags::
 	call EventScript_ResetAllBerries
 	end
 
+
+EventScript_ResetAllBerriesFrlg::
+	@ Viridian Forest
+	setberrytree BERRY_TREE_VIRIDIAN_FOREST_ORAN, BERRY_ID_ORAN, BERRY_STAGE_BERRIES
+
+
+return
+
 EventScript_ResetAllMapFlagsFrlg::
 	setflag FLAG_HIDE_OAK_IN_HIS_LAB
 	setflag FLAG_HIDE_OAK_IN_PALLET_TOWN
@@ -326,4 +334,6 @@ EventScript_ResetAllMapFlagsFrlg::
 	setflag FLAG_HIDE_FAME_CHECKER_LT_SURGE_JOURNAL
 	setflag FLAG_HIDE_SAFFRON_CITY_POKECENTER_SABRINA_JOURNALS
 	setvar VAR_MASSAGE_COOLDOWN_STEP_COUNTER, 500
+	
+	call EventScript_ResetAllBerriesFrlg
 	end
