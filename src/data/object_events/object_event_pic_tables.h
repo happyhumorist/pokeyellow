@@ -1923,6 +1923,19 @@ static const struct SpriteFrameImage sPicTable_JamesFrlg[] = {
     overworld_frame(gObjectEventPic_JamesFrlg, 2, 4, 8),
 };
 
+static const struct SpriteFrameImage sPicTable_SamuraiFrlg[] = {
+    overworld_frame(gObjectEventPic_SamuraiFrlg, 2, 4, 0),
+    overworld_frame(gObjectEventPic_SamuraiFrlg, 2, 4, 1),
+    overworld_frame(gObjectEventPic_SamuraiFrlg, 2, 4, 2),
+    overworld_frame(gObjectEventPic_SamuraiFrlg, 2, 4, 3),
+    overworld_frame(gObjectEventPic_SamuraiFrlg, 2, 4, 4),
+    overworld_frame(gObjectEventPic_SamuraiFrlg, 2, 4, 5),
+    overworld_frame(gObjectEventPic_SamuraiFrlg, 2, 4, 6),
+    overworld_frame(gObjectEventPic_SamuraiFrlg, 2, 4, 7),
+    overworld_frame(gObjectEventPic_SamuraiFrlg, 2, 4, 8),
+	overworld_frame(gObjectEventPic_SamuraiFrlg, 2, 4, 9),
+};
+
 static const struct SpriteFrameImage sPicTable_SwimmerMWater[] = {
     overworld_frame(gObjectEventPic_SwimmerMWater, 2, 4, 0),
     overworld_frame(gObjectEventPic_SwimmerMWater, 2, 4, 1),

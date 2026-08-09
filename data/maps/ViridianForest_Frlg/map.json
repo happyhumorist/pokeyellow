@@ -17,47 +17,35 @@
   "object_events": [
     {
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_YOUNGSTER_FRLG",
-      "x": 29,
-      "y": 57,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_UP",
-      "movement_range_x": 2,
-      "movement_range_y": 2,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "ViridianForest_EventScript_Youngster",
-      "flag": "0"
-    },
-    {
-      "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_BOY",
+      "graphics_id": "OBJ_EVENT_GFX_GIRL_2",
       "x": 46,
       "y": 45,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
-      "movement_range_x": 3,
-      "movement_range_y": 3,
+      "movement_type": "MOVEMENT_TYPE_WANDER_AROUND",
+      "movement_range_x": 2,
+      "movement_range_y": 2,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "ViridianForest_EventScript_Boy",
       "flag": "0"
     },
     {
+      "local_id": "LOCALID_VIRIDIANFOREST_SAMURAI",
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_BUG_CATCHER_FRLG",
+      "graphics_id": "OBJ_EVENT_GFX_SAMURAI_FRLG",
       "x": 26,
       "y": 33,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_BURIED",
+      "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "4",
-      "script": "ViridianForest_EventScript_Rick",
+      "script": "ViridianForest_EventScript_Samurai",
       "flag": "0"
     },
     {
+      "local_id": "LOCALID_VIRIDIANFOREST_JAMES",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_JAMES_FRLG",
       "x": 36,
@@ -67,11 +55,12 @@
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "4",
-      "script": "NULL",
-      "flag": "0"
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ViridianForest_EventScript_TR_Battle",
+      "flag": "FLAG_HIDE_VIRFOREST_TR"
     },
     {
+      "local_id": "LOCALID_VIRIDIANFOREST_JESSIE",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_JESS_FRLG",
       "x": 38,
@@ -81,9 +70,9 @@
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "4",
-      "script": "NULL",
-      "flag": "0"
+      "trainer_sight_or_berry_tree_id": "1",
+      "script": "ViridianForest_EventScript_TR_Battle",
+      "flag": "FLAG_HIDE_VIRFOREST_TR"
     },
     {
       "type": "object",
@@ -128,6 +117,7 @@
       "flag": "FLAG_HIDE_VIRIDIAN_FOREST_POTION"
     },
     {
+      "local_id": "LOCALID_VIRIDIAN_FOREST_LEAF",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LEAF",
       "x": 4,
@@ -138,10 +128,11 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
-      "script": "ViridianForest_EventScript_Anthony",
-      "flag": "0"
+      "script": "NULL",
+      "flag": "FLAG_HIDE_VIRIDIAN_FOREST_LEAF"
     },
     {
+      "local_id": "LOCALID_VIRIDIANFOREST_MEOWTH",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MEOWTH",
       "x": 37,
@@ -152,8 +143,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "1",
-      "script": "NULL",
-      "flag": "0"
+      "script": "ViridianForest_EventScript_TR_Battle",
+      "flag": "FLAG_HIDE_VIRFOREST_TR"
     },
     {
       "type": "object",
@@ -180,7 +171,21 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "NULL",
+      "script": "ViridianForest_EventScript_ItemGreatBall",
+      "flag": "FLAG_HIDE_VIRIDIAN_FOREST_GBALL"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_BRENDAN_NORMAL",
+      "x": 51,
+      "y": 10,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_NONE",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "0",
+      "script": "ViridianForest_EventScript_Heal",
       "flag": "0"
     }
   ],
@@ -228,7 +233,17 @@
       "dest_warp_id": "1"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 5,
+      "y": 12,
+      "elevation": 0,
+      "var": "VAR_TEMP_0",
+      "var_value": "0",
+      "script": "ViridianForest_EventScript_Leaf"
+    }
+  ],
   "bg_events": [
     {
       "type": "sign",
@@ -248,8 +263,8 @@
     },
     {
       "type": "sign",
-      "x": 43,
-      "y": 35,
+      "x": 45,
+      "y": 41,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "ViridianForest_EventScript_TrainerTips4"
@@ -280,8 +295,8 @@
     },
     {
       "type": "hidden_item",
-      "x": 25,
-      "y": 32,
+      "x": 7,
+      "y": 58,
       "elevation": 3,
       "item": "ITEM_POTION",
       "flag": "FLAG_HIDDEN_ITEM_VIRIDIAN_FOREST_POTION",

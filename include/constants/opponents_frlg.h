@@ -17,8 +17,8 @@
 #define TRAINER_YOUNGSTER_YASU                     11
 #define TRAINER_YOUNGSTER_DAVE                     12
 #define TRAINER_YOUNGSTER_BEN_2                    13
-#define TRAINER_BUG_CATCHER_RICK                   14
-#define TRAINER_BUG_CATCHER_DOUG                   15
+#define TRAINER_BUG_CATCHER_SAMURAI                14
+#define TRAINER_VIRIDIAN_FOREST_ROCKETS            15
 #define TRAINER_BUG_CATCHER_SAMMY                  16
 #define TRAINER_BUG_CATCHER_COLTON                 17
 #define TRAINER_BUG_CATCHER_GREG                   18
@@ -415,7 +415,7 @@
 #define TRAINER_BIKER_GOON                         409
 #define TRAINER_BIKER_GOON_2                       410
 #define TRAINER_BIKER_GOON_3                       411
-#define TRAINER_BUG_CATCHER_ANTHONY                412
+#define TRAINER_RIVAL_LEAF                         412
 #define TRAINER_BUG_CATCHER_CHARLIE                413
 #define TRAINER_TWINS_ELI_ANNE_2                   414
 #define TRAINER_YOUNGSTER_JOHNSON                  415
@@ -628,6 +628,7 @@
 #define TRAINER_CHAMPION_REMATCH_CHARMANDER        622
 #define TRAINER_CUE_BALL_PAXTON                    623
 #define TRAINER_VIRIDIAN_ROCKETS                   624
+
 
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is
 //       only space for 25 additional trainers before trainer flag space overflows.

@@ -9,6 +9,9 @@ Route2_EventScript_ItemParalyzeHeal::
 ViridianForest_EventScript_ItemPokeBall::
 	finditem ITEM_POKE_BALL
 	end
+ViridianForest_EventScript_ItemGreatBall::
+	finditem ITEM_GREAT_BALL
+	end
 
 ViridianForest_EventScript_ItemAntidote::
 	finditem ITEM_ANTIDOTE

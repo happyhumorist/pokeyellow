@@ -12510,18 +12510,18 @@
                 "species": "SPECIES_METAPOD"
               },
               {
-                "min_level": 3,
-                "max_level": 3,
-                "species": "SPECIES_PIDGEOTTO"
-              },
-              {
                 "min_level": 6,
                 "max_level": 6,
                 "species": "SPECIES_KAKUNA"
               },
               {
-                "min_level": 5,
-                "max_level": 6,
+                "min_level": 10,
+                "max_level": 10,
+                "species": "SPECIES_BEEDRILL"
+              },
+              {
+                "min_level": 9,
+                "max_level": 9,
                 "species": "SPECIES_PIDGEOTTO"
               }
             ]

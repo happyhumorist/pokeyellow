@@ -370,6 +370,9 @@ const u16 gTrainerPalette_RocketGruntMFrlg[] = INCGFX_U16("graphics/trainers/pal
 const u32 gTrainerFrontPic_JessJames[] = INCGFX_U32("graphics/trainers/front_pics/jessjames.png", ".4bpp.smol");
 const u16 gTrainerPalette_JessJames[] = INCGFX_U16("graphics/trainers/palettes/jessjames.pal", ".gbapal");
 
+const u32 gTrainerFrontPic_Samurai[] = INCGFX_U32("graphics/trainers/front_pics/samurai.png", ".4bpp.smol");
+const u16 gTrainerPalette_Samurai[] = INCGFX_U16("graphics/trainers/palettes/samurai.pal", ".gbapal");
+
 const u32 gTrainerFrontPic_CooltrainerMFrlg[] = INCGFX_U32("graphics/trainers/front_pics/cool_trainer_m_frlg.png", ".4bpp.smol");
 const u16 gTrainerPalette_CooltrainerMFrlg[] = INCGFX_U16("graphics/trainers/palettes/cool_trainer_m_frlg.pal", ".gbapal");
 
@@ -1096,7 +1099,11 @@ const struct TrainerPicInfo gTrainerPicInfo[TRAINER_PIC_COUNT] =
     [TRAINER_PIC_JESSJAMES] =
     {
         .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_JessJames, gTrainerPalette_JessJames),
-    },	
+    },
+  [TRAINER_PIC_SAMURAI] =
+    {
+        .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_Samurai, gTrainerPalette_Samurai),
+    },		
     [TRAINER_PIC_COOLTRAINER_M_FRLG] =
     {
         .frontPic = TRAINER_FRONT_PIC(gTrainerFrontPic_CooltrainerMFrlg, gTrainerPalette_CooltrainerMFrlg),
