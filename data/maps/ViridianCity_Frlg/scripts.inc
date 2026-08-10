@@ -97,7 +97,7 @@ ViridianCity_EventScript_OldManGymLeaderReturned::
 ViridianCity_EventScript_TutorialOldMan::
 	lock
 	faceplayer
-	goto_if_set FLAG_BADGE01_GET, ViridianCity_EventScript_AskIfTeachyTVHelpful
+@	goto_if_set FLAG_BADGE01_GET, ViridianCity_EventScript_AskIfTeachyTVHelpful
 	goto_if_ge VAR_MAP_SCENE_VIRIDIAN_CITY_OLD_MAN, 2, ViridianCity_EventScript_TutorialCompleted
 	goto_if_eq VAR_MAP_SCENE_VIRIDIAN_CITY_OLD_MAN, 1, ViridianCity_EventScript_TutorialStart
 	goto_if_eq VAR_MAP_SCENE_VIRIDIAN_CITY_OLD_MAN, 0, ViridianCity_EventScript_TutorialNotReady
@@ -229,7 +229,8 @@ ViridianCity_EventScript_DoTutorialBattle::
 	msgbox ViridianCity_Text_ThatWasEducationalTakeThis
 	setvar VAR_MAP_SCENE_VIRIDIAN_CITY_OLD_MAN, 2
 	giveitem ITEM_WAILMER_PAIL
-	msgbox ViridianCity_Text_WatchThatToLearnBasics
+@	msgbox ViridianCity_Text_WatchThatToLearnBasics
+	msgbox ViridianCity_Text_WaterPlants
 	return
 
 ViridianCity_Text_CanCarryMonsAnywhere::
@@ -258,7 +259,7 @@ ViridianCity_Text_ExplainCaterpieWeedle::
 	.string "Watch that your POKéMON aren't\n"
 	.string "stabbed by WEEDLE's POISON STING.$"
 
-ViridianCity_Text_GrandpaHasntHadCoffeeYet::
+ ViridianCity_Text_GrandpaHasntHadCoffeeYet::
 	.string "Oh, Grandpa!\n"
 	.string "Don't be so mean!\p"
 	.string "I'm so sorry.\n"
@@ -302,14 +303,16 @@ ViridianCity_Text_WatchThatToLearnBasics::
 	.string "understand, watch that.\p"
 	.string "It will teach you about the basics\n"
 	.string "of being a POKéMON TRAINER.$"
+	
+	
+ViridianCity_Text_WaterPlants::
+	.string "Sometimes I go into the forest to\n"
+	.string "water the plants with that.\p"
+	.string "It helps the berry trees grow\n"
+	.string "nice and tall!$"	
 
 ViridianCity_Text_WeakenMonsFirstToCatch::
-	.string "Well, now, I've had my coffee, and\n"
-	.string "that's what I need to get going!\p"
-	.string "But I made it too strong.\n"
-	.string "It gave me a headache…\p"
-	.string "Incidentally, are you filling your\n"
-	.string "POKéDEX?\p"
+	.string "Are you filling your POKéDEX?\p"
 	.string "At first, focus on weakening the\n"
 	.string "POKéMON before trying to catch it.$"
 

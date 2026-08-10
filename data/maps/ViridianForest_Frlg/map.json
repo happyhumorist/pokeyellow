@@ -48,8 +48,8 @@
       "local_id": "LOCALID_VIRIDIANFOREST_JAMES",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_JAMES_FRLG",
-      "x": 36,
-      "y": 48,
+      "x": 42,
+      "y": 39,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -63,8 +63,8 @@
       "local_id": "LOCALID_VIRIDIANFOREST_JESSIE",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_JESS_FRLG",
-      "x": 38,
-      "y": 48,
+      "x": 44,
+      "y": 39,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -120,10 +120,10 @@
       "local_id": "LOCALID_VIRIDIAN_FOREST_LEAF",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LEAF",
-      "x": 4,
-      "y": 12,
+      "x": 6,
+      "y": 11,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_RIGHT",
+      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
@@ -135,8 +135,8 @@
       "local_id": "LOCALID_VIRIDIANFOREST_MEOWTH",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_MEOWTH",
-      "x": 37,
-      "y": 48,
+      "x": 43,
+      "y": 39,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
@@ -186,6 +186,20 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "ViridianForest_EventScript_Heal",
+      "flag": "0"
+    },
+    {
+      "type": "object",
+      "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
+      "x": 25,
+      "y": 31,
+      "elevation": 0,
+      "movement_type": "MOVEMENT_TYPE_BERRY_TREE_GROWTH",
+      "movement_range_x": 0,
+      "movement_range_y": 0,
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "BERRY_TREE_VIRIDIAN_FOREST_ORAN",
+      "script": "BerryTreeScript",
       "flag": "0"
     }
   ],
@@ -237,11 +251,74 @@
     {
       "type": "trigger",
       "x": 5,
-      "y": 12,
+      "y": 11,
       "elevation": 0,
-      "var": "VAR_TEMP_0",
+      "var": "VAR_MAP_SCENE_VIRIDIAN_FOREST",
+      "var_value": "2",
+      "script": "ViridianForest_EventScript_Leaf_Right_Trigger"
+    },
+    {
+      "type": "trigger",
+      "x": 4,
+      "y": 11,
+      "elevation": 0,
+      "var": "VAR_MAP_SCENE_VIRIDIAN_FOREST",
+      "var_value": "2",
+      "script": "ViridianForest_EventScript_Leaf_Left_Trigger"
+    },
+    {
+      "type": "trigger",
+      "x": 33,
+      "y": 51,
+      "elevation": 0,
+      "var": "VAR_MAP_SCENE_VIRIDIAN_FOREST",
       "var_value": "0",
-      "script": "ViridianForest_EventScript_Leaf"
+      "script": "ViridianForest_EventScript_Caterpie"
+    },
+    {
+      "type": "trigger",
+      "x": 33,
+      "y": 52,
+      "elevation": 0,
+      "var": "VAR_MAP_SCENE_VIRIDIAN_FOREST",
+      "var_value": "0",
+      "script": "ViridianForest_EventScript_Caterpie"
+    },
+    {
+      "type": "trigger",
+      "x": 33,
+      "y": 53,
+      "elevation": 0,
+      "var": "VAR_MAP_SCENE_VIRIDIAN_FOREST",
+      "var_value": "0",
+      "script": "ViridianForest_EventScript_Caterpie"
+    },
+    {
+      "type": "trigger",
+      "x": 36,
+      "y": 46,
+      "elevation": 0,
+      "var": "VAR_MAP_SCENE_VIRIDIAN_FOREST",
+      "var_value": "1",
+      "script": "ViridianForest_EventScript_Pidgeotto"
+    },
+    {
+      "type": "trigger",
+      "x": 37,
+      "y": 46,
+      "elevation": 0,
+      "var": "VAR_MAP_SCENE_VIRIDIAN_FOREST",
+      "var_value": "1",
+      "script": "ViridianForest_EventScript_Pidgeotto"
+    },
+    {
+      "type": "trigger",
+      "x": 38,
+      "y": 46,
+      "elevation": 0,
+      "var": "VAR_MAP_SCENE_VIRIDIAN_FOREST",
+      "var_value": "1",
+      "script": "ViridianForest_EventScript_Pidgeotto"
     }
   ],
   "bg_events": [

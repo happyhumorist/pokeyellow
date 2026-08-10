@@ -24,7 +24,26 @@
       "dest_warp_id": "2"
     }
   ],
-  "coord_events": [],
+  "coord_events": [
+    {
+      "type": "trigger",
+      "x": 10,
+      "y": 3,
+      "elevation": 0,
+      "var": "VAR_MAP_SCENE_PALLET_TOWN_PLAYERS_HOUSE_2F",
+      "var_value": "1",
+      "script": "PalletTown_PlayersHouse_2F_EventScript_Clock"
+    },
+    {
+      "type": "trigger",
+      "x": 11,
+      "y": 3,
+      "elevation": 0,
+      "var": "VAR_MAP_SCENE_PALLET_TOWN_PLAYERS_HOUSE_2F",
+      "var_value": "1",
+      "script": "PalletTown_PlayersHouse_2F_EventScript_Clock"
+    }
+  ],
   "bg_events": [
     {
       "type": "sign",
@@ -56,15 +75,7 @@
       "y": 1,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "LittlerootTown_BrendansHouse_2F_EventScript_WallClock"
-    },
-    {
-      "type": "sign",
-      "x": 2,
-      "y": 6,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "PalletTown_PlayersHouse_2F_EventScript_Bed"
+      "script": "PalletTown_PlayersHouse_2F_EventScript_Clock"
     }
   ],
   "region": "REGION_KANTO"

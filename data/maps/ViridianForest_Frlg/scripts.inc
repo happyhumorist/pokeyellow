@@ -137,6 +137,23 @@ ViridianForest_Text_WeakenMonsBeforeCapture::
 ViridianForest_Text_LeavingViridianForest::
 	.string "LEAVING VIRIDIAN FOREST\n"
 	.string "PEWTER CITY AHEAD$"
+	
+	
+ViridianForest_EventScript_Caterpie::
+	setwildbattle SPECIES_CATERPIE, 6
+	dowildbattle
+	setvar VAR_MAP_SCENE_VIRIDIAN_FOREST, 1
+	end
+	
+ViridianForest_EventScript_Pidgeotto::
+	setwildbattle SPECIES_PIDGEOTTO, 8
+	dowildbattle
+	setvar VAR_MAP_SCENE_VIRIDIAN_FOREST, 2
+	end
+	
+
+
+
 
 ViridianForest_EventScript_TR_Battle::
 	lock
@@ -168,27 +185,72 @@ ViridianForest_EventScript_Heal::
 	releaseall
 	end
 	
+	
+ViridianForest_EventScript_Leaf_Left_Trigger::
+	lockall
+	setvar VAR_TEMP_1, 0
+	goto ViridianForest_EventScript_Leaf
+	end
+	
+ViridianForest_EventScript_Leaf_Right_Trigger::
+	setvar VAR_TEMP_1, 1
+	lockall
+	goto ViridianForest_EventScript_Leaf
+	end
+	
+	
 ViridianForest_EventScript_Leaf::
- 	trainerbattle_single TRAINER_RIVAL_LEAF, ViridianForest_Text_LeafIntro, ViridianForest_Text_LeafDefeat
-	goto ViridianForest_EventScript_EndLeafBattle
+	textcolor NPC_TEXT_COLOR_FEMALE
+	@ playbgm
+	applymovement LOCALID_VIRIDIAN_FOREST_LEAF, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterRight
+	applymovement LOCALID_VIRIDIAN_FOREST_LEAF, Common_Movement_Delay48
+	waitmovement 0
+	call_if_eq VAR_TEMP_1, 0, ViridianForest_EventScript_LeafApproachLeft
+	call_if_eq VAR_TEMP_1, 1, ViridianForest_EventScript_LeafApproachRight
+	msgbox ViridianForest_Text_LeafOtherKid
+	setvar VAR_LAST_TALKED, LOCALID_VIRIDIAN_FOREST_LEAF
+ 	trainerbattle_no_intro TRAINER_RIVAL_LEAF, ViridianForest_Text_LeafDefeat
+	msgbox ViridianForest_Text_LeafFun
+	closemessage
+	@ playbgm
+	call ViridianForest_EventScript_EndLeafBattle
+	playse SE_EXIT
+	@ fadedefaultbgm
+	removeobject LOCALID_VIRIDIAN_FOREST_LEAF
+	waitse
+	setvar VAR_MAP_SCENE_VIRIDIAN_FOREST, 3
+	setflag FLAG_HIDE_VIRIDIAN_FOREST_LEAF
+	releaseall
  	end
+	
 	
 ViridianForest_EventScript_EndLeafBattle::
 	applymovement LOCALID_VIRIDIAN_FOREST_LEAF, ViridianForest_Movement_LeafExit
-	removeobject LOCALID_VIRIDIAN_FOREST_LEAF
-	playse SE_EXIT
-	setflag FLAG_HIDE_VIRIDIAN_FOREST_LEAF
-	releaseall
-	end
+	waitmovement 0
+	return
 	
+	
+ViridianForest_EventScript_LeafApproachLeft::
+	closemessage
+	applymovement LOCALID_VIRIDIAN_FOREST_LEAF, ViridianForest_Movement_LeafApproachLeft
+	waitmovement 0
+	return
+
+ViridianForest_EventScript_LeafApproachRight::
+	return
+
+ViridianForest_Movement_LeafApproachLeft::
+	walk_left
+	step_end
+
+
 ViridianForest_Movement_LeafExit::
 	walk_up
-	walk_right
 	walk_up
 	delay_8
 	step_end
-	waitmovement LOCALID_OAKS_LAB_RIVAL
-	return
 	
 	
 ViridianForest_Text_TeamRocket_Intro::
@@ -218,6 +280,12 @@ ViridianForest_Text_SamuraiPostBattle::
 	.string "I have a camp further in where you\n"
 	.string "can heal.\p"
 	.string "BEE careful around the BEEDRILL!$"
+
+ViridianForest_Text_LeafOtherKid::
+	.string "So you're the other kid from Pallet?\n"
+	.string "I'm Leaf.\p"
+	.string "Let's battle!$"
+
 	
 ViridianForest_Text_LeafIntro::
 	.string "I might be little, but I won't like\n"
@@ -226,3 +294,6 @@ ViridianForest_Text_LeafIntro::
 ViridianForest_Text_LeafDefeat::
 	.string "Oh, boo.\n"
 	.string "Nothing went right.$"
+	
+ViridianForest_Text_LeafFun::
+	.string "That was fun!$"
