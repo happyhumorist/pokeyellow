@@ -4,6 +4,9 @@ gOtherText_NewName::
 gNameChoice_Green::
 	.string "GREEN$"
 
+gNameChoice_Blue::
+	.string "BLUE$"
+
 gNameChoice_Red::
 	.string "RED$"
 
