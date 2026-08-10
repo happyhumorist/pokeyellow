@@ -283,7 +283,7 @@ ViridianForest_Text_SamuraiPostBattle::
 
 ViridianForest_Text_LeafOtherKid::
 	.string "So you're the other kid from Pallet?\n"
-	.string "I'm Leaf.\p"
+	.string "I'm Neesha.\p"
 	.string "Let's battle!$"
 
 	
