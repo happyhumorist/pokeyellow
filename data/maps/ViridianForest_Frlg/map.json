@@ -117,7 +117,7 @@
       "flag": "FLAG_HIDE_VIRIDIAN_FOREST_POTION"
     },
     {
-      "local_id": "LOCALID_VIRIDIAN_FOREST_LEAF",
+      "local_id": "LOCALID_VIRIDIAN_FOREST_NEESHA",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_LEAF",
       "x": 6,
@@ -129,7 +129,7 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
       "script": "NULL",
-      "flag": "FLAG_HIDE_VIRIDIAN_FOREST_LEAF"
+      "flag": "FLAG_HIDE_VIRIDIAN_FOREST_NEESHA"
     },
     {
       "local_id": "LOCALID_VIRIDIANFOREST_MEOWTH",
@@ -255,7 +255,7 @@
       "elevation": 0,
       "var": "VAR_MAP_SCENE_VIRIDIAN_FOREST",
       "var_value": "2",
-      "script": "ViridianForest_EventScript_Leaf_Right_Trigger"
+      "script": "ViridianForest_EventScript_Neesha_Right_Trigger"
     },
     {
       "type": "trigger",
@@ -264,7 +264,7 @@
       "elevation": 0,
       "var": "VAR_MAP_SCENE_VIRIDIAN_FOREST",
       "var_value": "2",
-      "script": "ViridianForest_EventScript_Leaf_Left_Trigger"
+      "script": "ViridianForest_EventScript_Neesha_Left_Trigger"
     },
     {
       "type": "trigger",

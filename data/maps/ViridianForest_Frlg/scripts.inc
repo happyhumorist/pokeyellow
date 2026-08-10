@@ -186,67 +186,67 @@ ViridianForest_EventScript_Heal::
 	end
 	
 	
-ViridianForest_EventScript_Leaf_Left_Trigger::
+ViridianForest_EventScript_Neesha_Left_Trigger::
 	lockall
 	setvar VAR_TEMP_1, 0
-	goto ViridianForest_EventScript_Leaf
+	goto ViridianForest_EventScript_Neesha
 	end
 	
-ViridianForest_EventScript_Leaf_Right_Trigger::
+ViridianForest_EventScript_Neesha_Right_Trigger::
 	setvar VAR_TEMP_1, 1
 	lockall
-	goto ViridianForest_EventScript_Leaf
+	goto ViridianForest_EventScript_Neesha
 	end
 	
 	
-ViridianForest_EventScript_Leaf::
+ViridianForest_EventScript_Neesha::
 	textcolor NPC_TEXT_COLOR_FEMALE
 	@ playbgm
-	applymovement LOCALID_VIRIDIAN_FOREST_LEAF, Common_Movement_ExclamationMark
+	applymovement LOCALID_VIRIDIAN_FOREST_NEESHA, Common_Movement_ExclamationMark
 	waitmovement 0
 	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterRight
-	applymovement LOCALID_VIRIDIAN_FOREST_LEAF, Common_Movement_Delay48
+	applymovement LOCALID_VIRIDIAN_FOREST_NEESHA, Common_Movement_Delay48
 	waitmovement 0
-	call_if_eq VAR_TEMP_1, 0, ViridianForest_EventScript_LeafApproachLeft
-	call_if_eq VAR_TEMP_1, 1, ViridianForest_EventScript_LeafApproachRight
-	msgbox ViridianForest_Text_LeafOtherKid
-	setvar VAR_LAST_TALKED, LOCALID_VIRIDIAN_FOREST_LEAF
- 	trainerbattle_no_intro TRAINER_RIVAL_LEAF, ViridianForest_Text_LeafDefeat
-	msgbox ViridianForest_Text_LeafFun
+	call_if_eq VAR_TEMP_1, 0, ViridianForest_EventScript_NeeshaApproachLeft
+	call_if_eq VAR_TEMP_1, 1, ViridianForest_EventScript_NeeshaApproachRight
+	msgbox ViridianForest_Text_NeeshaOtherKid
+	setvar VAR_LAST_TALKED, LOCALID_VIRIDIAN_FOREST_NEESHA
+ 	trainerbattle_no_intro TRAINER_RIVAL_NEESHA, ViridianForest_Text_NeeshaDefeat
+	msgbox ViridianForest_Text_NeeshaFun
 	closemessage
 	@ playbgm
-	call ViridianForest_EventScript_EndLeafBattle
+	call ViridianForest_EventScript_EndNeeshaBattle
 	playse SE_EXIT
 	@ fadedefaultbgm
-	removeobject LOCALID_VIRIDIAN_FOREST_LEAF
+	removeobject LOCALID_VIRIDIAN_FOREST_NEESHA
 	waitse
 	setvar VAR_MAP_SCENE_VIRIDIAN_FOREST, 3
-	setflag FLAG_HIDE_VIRIDIAN_FOREST_LEAF
+	setflag FLAG_HIDE_VIRIDIAN_FOREST_NEESHA
 	releaseall
  	end
 	
 	
-ViridianForest_EventScript_EndLeafBattle::
-	applymovement LOCALID_VIRIDIAN_FOREST_LEAF, ViridianForest_Movement_LeafExit
+ViridianForest_EventScript_EndNeeshaBattle::
+	applymovement LOCALID_VIRIDIAN_FOREST_NEESHA, ViridianForest_Movement_NeeshaExit
 	waitmovement 0
 	return
 	
 	
-ViridianForest_EventScript_LeafApproachLeft::
+ViridianForest_EventScript_NeeshaApproachLeft::
 	closemessage
-	applymovement LOCALID_VIRIDIAN_FOREST_LEAF, ViridianForest_Movement_LeafApproachLeft
+	applymovement LOCALID_VIRIDIAN_FOREST_NEESHA, ViridianForest_Movement_NeeshaApproachLeft
 	waitmovement 0
 	return
 
-ViridianForest_EventScript_LeafApproachRight::
+ViridianForest_EventScript_NeeshaApproachRight::
 	return
 
-ViridianForest_Movement_LeafApproachLeft::
+ViridianForest_Movement_NeeshaApproachLeft::
 	walk_left
 	step_end
 
 
-ViridianForest_Movement_LeafExit::
+ViridianForest_Movement_NeeshaExit::
 	walk_up
 	walk_up
 	delay_8
@@ -281,19 +281,19 @@ ViridianForest_Text_SamuraiPostBattle::
 	.string "can heal.\p"
 	.string "BEE careful around the BEEDRILL!$"
 
-ViridianForest_Text_LeafOtherKid::
+ViridianForest_Text_NeeshaOtherKid::
 	.string "So you're the other kid from Pallet?\n"
 	.string "I'm Neesha.\p"
 	.string "Let's battle!$"
 
 	
-ViridianForest_Text_LeafIntro::
+ViridianForest_Text_NeeshaIntro::
 	.string "I might be little, but I won't like\n"
 	.string "it if you go easy on me!$"
 
-ViridianForest_Text_LeafDefeat::
+ViridianForest_Text_NeeshaDefeat::
 	.string "Oh, boo.\n"
 	.string "Nothing went right.$"
 	
-ViridianForest_Text_LeafFun::
+ViridianForest_Text_NeeshaFun::
 	.string "That was fun!$"
