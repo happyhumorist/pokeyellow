@@ -414,4 +414,4 @@ ViridianCity_Text_TeamRocket_Defeat::
 	
 ViridianCity_Text_TeamRocket_Boss::
 	.string "The boss'll want to know about\n"
-	.string "that twerps strong POKéMON!$"
+	.string "that twerps strong PIKACHU!$"
