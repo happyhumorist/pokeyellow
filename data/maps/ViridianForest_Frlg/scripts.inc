@@ -166,10 +166,12 @@ ViridianForest_EventScript_TR_Battle::
 	msgbox ViridianForest_Text_TeamRocket_Boss
 	closemessage
 	fadescreen FADE_TO_BLACK
+	playse SE_BANG
 	removeobject LOCALID_VIRIDIANFOREST_JESSIE
 	removeobject LOCALID_VIRIDIANFOREST_JAMES
 	removeobject LOCALID_VIRIDIANFOREST_MEOWTH
 	setflag FLAG_HIDE_VIRFOREST_TR
+	waitse
 	delay 60
 	fadescreen FADE_FROM_BLACK
 	releaseall
@@ -216,7 +218,6 @@ ViridianForest_EventScript_Neesha::
 	closemessage
 	@ playbgm
 	call ViridianForest_EventScript_EndNeeshaBattle
-	playse SE_EXIT
 	@ fadedefaultbgm
 	removeobject LOCALID_VIRIDIAN_FOREST_NEESHA
 	waitse
@@ -254,9 +255,9 @@ ViridianForest_Movement_NeeshaExit::
 	
 	
 ViridianForest_Text_TeamRocket_Intro::
-	.string "Jessie!\n"
-	.string "James!\p"
-	.string "Team Rocket, Blast off at the\n" 
+	.string "JESSIE!\n"
+	.string "JAMES!\p"
+	.string "TEAM ROCKET, Blast off at the\n" 
 	.string "speed of light!\p"
 	.string "Surrender now, or prepare to fight!\n"
 	.string "MEOWTH, dat's right!$"
@@ -265,8 +266,8 @@ ViridianForest_Text_TeamRocket_Defeat::
 	.string "UH-OH! MEOWTH?!$"
 	
 ViridianForest_Text_TeamRocket_Boss::
-	.string "The boss'll want to know about\n"
-	.string "that twerps strong POKéMON!$"
+	.string "We've got to get the twerp's POKéMON!\n"
+	.string "The boss'll reward us then!$"
 	
 ViridianForest_Text_SamuraiIntro::
 	.string "Hey! Are you the trainer from Pallet?\p"
@@ -282,18 +283,19 @@ ViridianForest_Text_SamuraiPostBattle::
 	.string "BEE careful around the BEEDRILL!$"
 
 ViridianForest_Text_NeeshaOtherKid::
-	.string "So you're the other kid from Pallet?\n"
-	.string "I'm Neesha.\p"
-	.string "Let's battle!$"
+	.string "YO! Let's battle!$"
 
 	
 ViridianForest_Text_NeeshaIntro::
-	.string "I might be little, but I won't like\n"
-	.string "it if you go easy on me!$"
+	.string "So you're the other kid from Pallet?\n"
+	.string "I'm Neesha.\p"
+
 
 ViridianForest_Text_NeeshaDefeat::
-	.string "Oh, boo.\n"
-	.string "Nothing went right.$"
+	.string "That was fun!$"
 	
 ViridianForest_Text_NeeshaFun::
-	.string "That was fun!$"
+	.string "Have you met {RIVAL}?\n"
+	.string "He was rude, but strong.\p"
+	.string "Hopefully we battle again\n"
+	.string "{PLAYER}.$"
