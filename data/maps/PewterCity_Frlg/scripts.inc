@@ -5,6 +5,7 @@ PewterCity_Frlg_MapScripts::
 PewterCity_OnTransition::
 	setworldmapflag FLAG_WORLD_MAP_PEWTER_CITY
 	setvar VAR_MAP_SCENE_PEWTER_CITY_MUSEUM_1F, 0
+	call_if_eq VAR_MAP_SCENE_ROUTE2_CHARMANDER, 2, PewterCity_EventScript_Charmander_Weather
 	end
 
 @ Impossible to speak to this NPC from a facing dir != DIR_EAST normally, so they arent checked
@@ -974,3 +975,7 @@ PewterCity_Text_RunningShoesLetterFromMom::
 	.string "you! Don't ever give up!\p"
 	.string "From Mom$"
 
+PewterCity_EventScript_Charmander_Weather::
+	setweather(WEATHER_DOWNPOUR)
+	doweather
+	end
