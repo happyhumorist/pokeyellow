@@ -220,6 +220,7 @@ ViridianForest_EventScript_Neesha::
 	call ViridianForest_EventScript_EndNeeshaBattle
 	@ fadedefaultbgm
 	removeobject LOCALID_VIRIDIAN_FOREST_NEESHA
+	playse SE_EXIT
 	waitse
 	setvar VAR_MAP_SCENE_VIRIDIAN_FOREST, 3
 	setflag FLAG_HIDE_VIRIDIAN_FOREST_NEESHA
@@ -297,5 +298,4 @@ ViridianForest_Text_NeeshaDefeat::
 ViridianForest_Text_NeeshaFun::
 	.string "Have you met {RIVAL}?\n"
 	.string "He was rude, but strong.\p"
-	.string "Hopefully we battle again\n"
-	.string "{PLAYER}.$"
+	.string "Hopefully we battle again {PLAYER}.$"
