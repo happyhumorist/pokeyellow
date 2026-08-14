@@ -4,17 +4,17 @@ FuchsiaCity_Frlg_MapScripts::
 
 FuchsiaCity_OnTransition::
 	setworldmapflag FLAG_WORLD_MAP_FUCHSIA_CITY
-	call_if_set FLAG_GOT_DOME_FOSSIL, FuchsiaCity_EventScript_SetOmanyteGfx
-	call_if_unset FLAG_GOT_DOME_FOSSIL, FuchsiaCity_EventScript_SetKabutoGfx
+	@ call_if_set FLAG_GOT_DOME_FOSSIL, FuchsiaCity_EventScript_SetOmanyteGfx
+	@ call_if_unset FLAG_GOT_DOME_FOSSIL, FuchsiaCity_EventScript_SetKabutoGfx
 	end
 
-FuchsiaCity_EventScript_SetOmanyteGfx::
-	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_OMANYTE
-	return
+@ FuchsiaCity_EventScript_SetOmanyteGfx::
+@	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_OMANYTE
+@	return
 
-FuchsiaCity_EventScript_SetKabutoGfx::
-	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_KABUTO
-	return
+@ FuchsiaCity_EventScript_SetKabutoGfx::
+@	setvar VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_KABUTO
+@	return
 
 FuchsiaCity_EventScript_LittleBoy::
 	msgbox FuchsiaCity_Text_DidYouTrySafariGame, MSGBOX_NPC
