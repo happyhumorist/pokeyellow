@@ -10229,6 +10229,18 @@
       "secondary_tileset": "gTileset_GenericBuilding2",
       "border_filepath": "data/layouts/PalletTown_RedsHouse_Y/border.bin",
       "blockdata_filepath": "data/layouts/PalletTown_RedsHouse_Y/map.bin"
+    },
+    {
+      "id": "LAYOUT_PEWTER_CITY_BROCK_HOUSE",
+      "name": "PEWTER_CITY_BROCK_HOUSE_Layout",
+      "width": 16,
+      "height": 9,
+      "border_width": 2,
+      "border_height": 2,
+      "primary_tileset": "gTileset_BuildingFrlg",
+      "secondary_tileset": "gTileset_GenericBuilding1",
+      "border_filepath": "data/layouts/PEWTER_CITY_BROCK_HOUSE/border.bin",
+      "blockdata_filepath": "data/layouts/PEWTER_CITY_BROCK_HOUSE/map.bin"
     }
   ]
 }
