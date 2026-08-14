@@ -31,6 +31,8 @@ PalletTown_ProfessorOaksLab_EventScript_ReadyOakForStarterScene::
 	setobjectxyperm LOCALID_OAKS_LAB_PROF_OAK, 6, 11
 	setobjectmovementtype LOCALID_OAKS_LAB_PROF_OAK, MOVEMENT_TYPE_FACE_UP
 	savebgm MUS_RG_OAK
+	setobjectxyperm LOCALID_PIKACHU, 9, 4
+	setobjectmovementtype LOCALID_PIKACHU, MOVEMENT_TYPE_FACE_DOWN
 	return
 
 PalletTown_ProfessorOaksLab_EventScript_ReadyOakForNationalDexScene::
@@ -552,19 +554,19 @@ PalletTown_ProfessorOaksLab_EventScript_EndRivalBattle::
 
 PalletTown_ProfessorOaksLab_EventScript_RivalExitAfterBattleLeft::
 	applymovement LOCALID_OAKS_LAB_RIVAL, PalletTown_ProfessorOaksLab_Movement_RivalExitAfterBattleLeft
-	applymovement LOCALID_PLAYER, PalletTown_ProfessorOaksLab_Movement_PlayerWatchRivalExitAfterBattle
+	@ applymovement LOCALID_PLAYER, PalletTown_ProfessorOaksLab_Movement_PlayerWatchRivalExitAfterBattle
 	waitmovement LOCALID_OAKS_LAB_RIVAL
 	return
 
 PalletTown_ProfessorOaksLab_EventScript_RivalExitAfterBattleMid::
 	applymovement LOCALID_OAKS_LAB_RIVAL, PalletTown_ProfessorOaksLab_Movement_RivalExitAfterBattleMid
-	applymovement LOCALID_PLAYER, PalletTown_ProfessorOaksLab_Movement_PlayerWatchRivalExitAfterBattle
+	@ applymovement LOCALID_PLAYER, PalletTown_ProfessorOaksLab_Movement_PlayerWatchRivalExitAfterBattle
 	waitmovement LOCALID_OAKS_LAB_RIVAL
 	return
 
 PalletTown_ProfessorOaksLab_EventScript_RivalExitAfterBattleRight::
 	applymovement LOCALID_OAKS_LAB_RIVAL, PalletTown_ProfessorOaksLab_Movement_RivalExitAfterBattleRight
-	applymovement LOCALID_PLAYER, PalletTown_ProfessorOaksLab_Movement_PlayerWatchRivalExitAfterBattleRight
+	@ applymovement LOCALID_PLAYER, PalletTown_ProfessorOaksLab_Movement_PlayerWatchRivalExitAfterBattleRight
 	waitmovement LOCALID_OAKS_LAB_RIVAL
 	return
 
@@ -1429,7 +1431,7 @@ PalletTown_ProfessorOaksLab_Text_RivalGoToughenMyMon::
 	.string "{RIVAL}: Okay! I'll make my\n"
 	.string "POKéMON battle to toughen it up!\p"
 	.string "{PLAYER}! Gramps!\n"
-	.string "Smell you later loser!$"
+	.string "Smell ya later loser!$"
 
 PalletTown_ProfessorOaksLab_Text_RivalGramps::
 	.string "{RIVAL}: Gramps!$"
