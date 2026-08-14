@@ -27,8 +27,8 @@
   "coord_events": [
     {
       "type": "trigger",
-      "x": 10,
-      "y": 3,
+      "x": 1,
+      "y": 5,
       "elevation": 0,
       "var": "VAR_MAP_SCENE_PALLET_TOWN_PLAYERS_HOUSE_2F",
       "var_value": "1",
@@ -36,8 +36,8 @@
     },
     {
       "type": "trigger",
-      "x": 11,
-      "y": 3,
+      "x": 3,
+      "y": 5,
       "elevation": 0,
       "var": "VAR_MAP_SCENE_PALLET_TOWN_PLAYERS_HOUSE_2F",
       "var_value": "1",
