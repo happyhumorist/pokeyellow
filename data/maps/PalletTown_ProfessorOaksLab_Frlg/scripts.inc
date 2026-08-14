@@ -1414,8 +1414,8 @@ PalletTown_ProfessorOaksLab_Text_RivalMyMonLooksTougher::
 
 PalletTown_ProfessorOaksLab_Text_RivalLetsCheckOutMons::
 	.string "{RIVAL}: Wait, {PLAYER}!\n"
-	.string "Let's check out our POKéMON!\p"
-	.string "Come on, I'll take you on!$"
+	.string "Gramps gave you a POKéMON?\p"
+	.string "I bet it's as lame as you!$"
 
 PalletTown_ProfessorOaksLab_Text_RivalDefeat::
 	.string "WHAT?\n"
