@@ -6459,6 +6459,38 @@ enum Species SanitizeSpeciesId(enum Species species)
     return species;
 }
 
+/* enum Species SanitizeSpeciesId(enum Species species)
+{
+    // 1. If it completely exceeds maximum bounds, default to NONE
+    if (species > NUM_SPECIES)
+    {
+        return SPECIES_NONE;
+    }
+
+    // 2. If it's valid but disabled, re-roll a fallback species
+    if (species != SPECIES_NONE && !IsSpeciesEnabled(species))
+    {
+        // Try getting its un-evolved form first (often enabled in regional dex configs)
+        enum Species preEvo = GetSpeciesPreEvolution(species);
+        if (preEvo != SPECIES_NONE && IsSpeciesEnabled(preEvo))
+        {
+            return preEvo;
+        }
+
+        // If the pre-evo is also disabled, fall back to a universally safe species (like Bulbasaur)
+        if (IsSpeciesEnabled(SPECIES_BULBASAUR))
+        {
+            return SPECIES_BULBASAUR;
+        }
+
+        // Ultimate fallback safety net
+        return SPECIES_NONE;
+    }
+
+    return species;
+} */
+
+
 bool32 IsSpeciesEnabled(enum Species species)
 {
     // This function should not use the GetSpeciesBaseHP function, as the included sanitation will result in an infinite loop
