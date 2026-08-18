@@ -1,0 +1,10 @@
+fieldmap:
+  num_tiles_in_primary: 640
+  num_tiles_total: 1024
+  num_metatiles_in_primary: 640
+  num_metatiles_total: 1024
+  num_pals_in_primary: 7
+  num_pals_total: 13
+  max_map_data_size: 10240
+  num_tiles_per_metatile: 12
+  # metatile_attribute_size: 4
