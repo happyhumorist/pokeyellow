@@ -288,6 +288,7 @@ extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_RocketF;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_JessFrlg;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_JamesFrlg;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_SamuraiFrlg;
+extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_CharmanderFrlg;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_GBAKid;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_PokeManiacFrlg;
 extern const struct ObjectEventGraphicsInfo gObjectEventGraphicsInfo_Biker;
@@ -700,6 +701,7 @@ const struct ObjectEventGraphicsInfo *const gObjectEventGraphicsInfoPointers[NUM
 	[OBJ_EVENT_GFX_JESS_FRLG]                = &gObjectEventGraphicsInfo_JessFrlg,
 	[OBJ_EVENT_GFX_JAMES_FRLG]               = &gObjectEventGraphicsInfo_JamesFrlg,
 	[OBJ_EVENT_GFX_SAMURAI_FRLG]             = &gObjectEventGraphicsInfo_SamuraiFrlg,
+	[OBJ_EVENT_GFX_CHARMANDER_FRLG]          = &gObjectEventGraphicsInfo_CharmanderFrlg,
     [OBJ_EVENT_GFX_GBA_KID]                  = &gObjectEventGraphicsInfo_GBAKid,
     [OBJ_EVENT_GFX_POKE_MANIAC_FRLG]         = &gObjectEventGraphicsInfo_PokeManiacFrlg,
     [OBJ_EVENT_GFX_BIKER]                    = &gObjectEventGraphicsInfo_Biker,

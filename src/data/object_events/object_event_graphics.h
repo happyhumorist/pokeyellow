@@ -496,6 +496,7 @@ const u16 gObjectEventPal_NpcWhiteReflection[] = INCGFX_U16("graphics/object_eve
 const u16 gObjectEventPal_JessFrlg[] = INCGFX_U16("graphics/object_events/palettes/jess.pal", ".gbapal");
 const u16 gObjectEventPal_JamesFrlg[] = INCGFX_U16("graphics/object_events/palettes/james.pal", ".gbapal");
 const u16 gObjectEventPal_SamuraiFrlg[] = INCGFX_U16("graphics/object_events/palettes/samurai.pal", ".gbapal");
+const u16 gObjectEventPal_CharmanderFrlg[] = INCGFX_U16("graphics/object_events/palettes/charmander.pal", ".gbapal");
 
 const u16 gObjectEventPic_Pokedex[] = INCGFX_U16("graphics/object_events/pics/misc/pokedex.png", ".4bpp");
 const u16 gObjectEventPic_TownMap[] = INCGFX_U16("graphics/object_events/pics/misc/town_map.png", ".4bpp", "-mwidth 2 -mheight 2");
@@ -540,6 +541,7 @@ const u16 gObjectEventPic_RocketF[] = INCGFX_U16("graphics/object_events/pics/pe
 const u16 gObjectEventPic_JessFrlg[] = INCGFX_U16("graphics/object_events/pics/people/jess_frlg.png", ".4bpp", "-mwidth 2 -mheight 4");
 const u16 gObjectEventPic_JamesFrlg[] = INCGFX_U16("graphics/object_events/pics/people/james_frlg.png", ".4bpp", "-mwidth 2 -mheight 4");
 const u16 gObjectEventPic_SamuraiFrlg[] = INCGFX_U16("graphics/object_events/pics/people/samurai_frlg.png", ".4bpp", "-mwidth 2 -mheight 4");
+const u16 gObjectEventPic_CharmanderFrlg[] = INCGFX_U16("graphics/object_events/pics/people/charmander_frlg.png", ".4bpp", "-mwidth 2 -mheight 2");
 const u16 gObjectEventPic_SwimmerMWater[] = INCGFX_U16("graphics/object_events/pics/people/swimmer_m_water.png", ".4bpp", "-mwidth 2 -mheight 4");
 const u16 gObjectEventPic_SwimmerFWater[] = INCGFX_U16("graphics/object_events/pics/people/swimmer_f_water.png", ".4bpp", "-mwidth 2 -mheight 4");
 const u16 gObjectEventPic_SwimmerMLand[] = INCGFX_U16("graphics/object_events/pics/people/swimmer_m_land.png", ".4bpp", "-mwidth 2 -mheight 4");

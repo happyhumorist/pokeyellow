@@ -32,3 +32,6 @@ $(OBJEVENTGFXDIR)/people/james_frlg.4bpp: %.4bpp: %.png
 	
 $(OBJEVENTGFXDIR)/people/samurai_frlg.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -mwidth 4 -mheight 4
+	
+# $(OBJEVENTGFXDIR)/people/charmander_frlg.4bpp: %.4bpp: %.png
+	# $(GFX) $< $@ -mwidth 4 -mheight 2

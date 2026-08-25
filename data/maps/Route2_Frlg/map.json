@@ -121,7 +121,7 @@
     {
       "local_id": "LOCALID_CHARMANDER",
       "type": "object",
-      "graphics_id": "OBJ_EVENT_GFX_UNUSED_SQUIRTLE_DOLL",
+      "graphics_id": "OBJ_EVENT_GFX_CHARMANDER_FRLG",
       "x": 5,
       "y": 2,
       "elevation": 0,
