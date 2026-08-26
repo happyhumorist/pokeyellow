@@ -1746,3 +1746,6 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 	.include "data/maps/PalletTown_RedsHouse_Y/text.inc"
 	.include "data/maps/PEWTER_CITY_BROCK_HOUSE/scripts.inc"
 	.include "data/maps/PEWTER_CITY_BROCK_HOUSE/text.inc"
+
+	.include "data/maps/Underwater_Route1_Frlg/scripts.inc"
+	.include "data/maps/Underwater_Route1_Frlg/text.inc"

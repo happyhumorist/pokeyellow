@@ -134,12 +134,16 @@ Route1_EventScript_Misty::
 	faceplayer
 # 72 "data/maps/Route1_Frlg/scripts.pory"
 	msgbox MistyText
-# 73 "data/maps/Route1_Frlg/scripts.pory"
+# 74 "data/maps/Route1_Frlg/scripts.pory"
+	setflag FLAG_BADGE05_GET
+# 75 "data/maps/Route1_Frlg/scripts.pory"
+	setflag FLAG_BADGE07_GET
+# 76 "data/maps/Route1_Frlg/scripts.pory"
 	release
 	return
 
 
 MistyText::
-# 76 "data/maps/Route1_Frlg/scripts.pory"
+# 79 "data/maps/Route1_Frlg/scripts.pory"
 	.string "I'm traveling to become the world's\n"
 	.string "greatest water POKéMON trainer!$"
