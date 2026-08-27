@@ -163,7 +163,7 @@ class WildEncounterAssembler:
             encounter_data = map_data
             map_group = map_data["mapGroup"]
             map_num = map_data["mapNum"]
-            version = "EMERALD"
+            version = "FIRERED"
             if "FireRed" in shared_label:
                 version = "FIRERED"
             elif "LeafGreen" in shared_label:
@@ -236,7 +236,7 @@ class WildEncounterAssembler:
                 headers["data"][shared_label]["mapGroup"] = map_group
                 headers["data"][shared_label]["mapNum"] = map_num
 
-                version = "EMERALD"
+                version = "FIRERED"
                 if "FireRed" in shared_label:
                     version = "FIRERED"
                 elif "LeafGreen" in shared_label:
