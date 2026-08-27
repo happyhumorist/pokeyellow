@@ -677,6 +677,7 @@ static const struct DebugMenuOption sDebugMenu_Actions_Scripts[] =
     { NULL }
 };
 
+
 static const struct DebugMenuOption sDebugMenu_Actions_Trainers[] =
 {
     { COMPOUND_STRING("Choose trainer from map"), DebugAction_Trainers_ChooseFromMap },

@@ -201,20 +201,43 @@ Debug_EventScript_Text_DefensiveIVs:
 	.string "HP IVs: {STR_VAR_1}, DEF IVs: {STR_VAR_2}, SPDEF IVs: {STR_VAR_3}$"
 
 Debug_EventScript_Script_1::
+	lock
+	specialvar VAR_RESULT, PlayerGetElevation
+	buffernumberstring STR_VAR_1, VAR_RESULT
+	msgbox SpecialVarTest_Text_0
 	release
-	end
+	return
+	
+SpecialVarTest_Text_0:
+	.string "Elevation is: {STR_VAR_1}$"
+
 
 Debug_EventScript_Script_2::
+	lock
+	special SweetScentWildEncounter
 	release
 	end
 
 Debug_EventScript_Script_3::
+	lock
+	specialvar VAR_RESULT, GetCurrentMapWildMonHeaderId
+	buffernumberstring STR_VAR_1, VAR_RESULT
+	msgbox SpecialVarTest_Text_3
 	release
 	end
+SpecialVarTest_Text_3:
+	.string "Elevation is: {STR_VAR_1}$"
+
 
 Debug_EventScript_Script_4::
+	lock 
+	specialvar VAR_RESULT, MapHasNoEncounterData
+	buffernumberstring STR_VAR_1, VAR_RESULT
+	msgbox SpecialVarTest_Text_4
 	release
 	end
+SpecialVarTest_Text_4::
+	.string "{STR_VAR_1}$"
 
 Debug_EventScript_Script_5::
 	release
