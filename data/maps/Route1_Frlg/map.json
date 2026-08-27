@@ -25,7 +25,7 @@
       "direction": "down"
     },
     {
-      "map": "MAP_UNDERWATER_ROUTE1_FRLG",
+      "map": "MAP_ROUTE1_UNDER",
       "offset": 0,
       "direction": "dive"
     }

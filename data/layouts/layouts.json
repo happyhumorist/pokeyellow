@@ -10249,10 +10249,22 @@
       "height": 14,
       "border_width": 2,
       "border_height": 2,
-      "primary_tileset": "gTileset_General_Frlg",
+      "primary_tileset": "gTileset_Underwater_Frlg",
       "secondary_tileset": "gTileset_SeafoamIslands",
       "border_filepath": "data/layouts/Underwater_Route1_Frlg/border.bin",
       "blockdata_filepath": "data/layouts/Underwater_Route1_Frlg/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE1_UNDER",
+      "name": "Route1_Under_Layout",
+      "width": 21,
+      "height": 13,
+      "border_width": 1,
+      "border_height": 1,
+      "primary_tileset": "gTileset_Underwater_Frlg",
+      "secondary_tileset": "gTileset_PalletTown",
+      "border_filepath": "data/layouts/Route1_Under/border.bin",
+      "blockdata_filepath": "data/layouts/Route1_Under/map.bin"
     }
   ]
 }

@@ -1749,3 +1749,6 @@ EventScript_PalletTown_PlayersHouse_2F_TurnOnPC::
 
 	.include "data/maps/Underwater_Route1_Frlg/scripts.inc"
 	.include "data/maps/Underwater_Route1_Frlg/text.inc"
+
+	.include "data/maps/Route1_Under/scripts.inc"
+	.include "data/maps/Route1_Under/text.inc"
