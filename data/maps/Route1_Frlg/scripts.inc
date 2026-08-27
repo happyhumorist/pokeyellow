@@ -139,11 +139,13 @@ Route1_EventScript_Misty::
 # 75 "data/maps/Route1_Frlg/scripts.pory"
 	setflag FLAG_BADGE07_GET
 # 76 "data/maps/Route1_Frlg/scripts.pory"
+	additem ITEM_OLD_ROD
+# 77 "data/maps/Route1_Frlg/scripts.pory"
 	release
 	return
 
 
 MistyText::
-# 79 "data/maps/Route1_Frlg/scripts.pory"
+# 80 "data/maps/Route1_Frlg/scripts.pory"
 	.string "I'm traveling to become the world's\n"
 	.string "greatest water POKéMON trainer!$"
