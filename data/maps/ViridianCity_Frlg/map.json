@@ -46,6 +46,7 @@
       "flag": "0"
     },
     {
+      "local_id": "LOCALID_ROUTE22_BORDER_TREE",
       "type": "object",
       "graphics_id": "OBJ_EVENT_GFX_CUTTABLE_TREE_FRLG",
       "x": 8,
