@@ -138,7 +138,6 @@ ViridianForest_Text_LeavingViridianForest::
 	.string "LEAVING VIRIDIAN FOREST\n"
 	.string "PEWTER CITY AHEAD$"
 	
-	
 ViridianForest_EventScript_Caterpie::
 	setwildbattle SPECIES_CATERPIE, 6
 	dowildbattle
@@ -183,6 +182,9 @@ ViridianForest_EventScript_Samurai::
 	end
 	
 ViridianForest_EventScript_Heal::
+	lock
+	faceplayer
+	msgbox ViridianForest_Text_SamuraiHeal
 	special HealPlayerParty
 	releaseall
 	end
@@ -282,6 +284,9 @@ ViridianForest_Text_SamuraiPostBattle::
 	.string "I have a camp further in where you\n"
 	.string "can heal.\p"
 	.string "BEE careful around the BEEDRILL!$"
+	
+ViridianForest_Text_SamuraiHeal::
+	.string "Heal up!$"
 
 ViridianForest_Text_NeeshaOtherKid::
 	.string "YO! Let's battle!$"
