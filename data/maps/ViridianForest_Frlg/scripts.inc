@@ -176,16 +176,135 @@ ViridianForest_EventScript_TR_Battle::
 	releaseall
 	end
 	
-ViridianForest_EventScript_Samurai::
-	trainerbattle_single TRAINER_BUG_CATCHER_SAMURAI, ViridianForest_Text_SamuraiIntro, ViridianForest_Text_SamuraiDefeat
-	msgbox ViridianForest_Text_SamuraiPostBattle, MSGBOX_AUTOCLOSE
+ViridianForest_EventScript_Samurai_Top_Trigger::
+	lockall
+	setvar VAR_TEMP_1, 0
+	goto ViridianForest_EventScript_Samurai
 	end
+	
+ViridianForest_EventScript_Samurai_Middle_Trigger::
+	lockall
+	setvar VAR_TEMP_1, 1
+	goto ViridianForest_EventScript_Samurai
+	end
+
+ViridianForest_EventScript_Samurai_Bottom_Trigger::
+	lockall
+	setvar VAR_TEMP_1, 2
+	goto ViridianForest_EventScript_Samurai
+	end
+	
+ViridianForest_EventScript_Samurai::
+
+	call_if_eq VAR_TEMP_1,0, ViridianForest_Engage_Event_Samurai_Top
+	call_if_eq VAR_TEMP_1,1, ViridianForest_Engage_Event_Samurai_Middle
+	call_if_eq VAR_TEMP_1,2, ViridianForest_Engage_Event_Samurai_Bottom
+	msgbox ViridianForest_Text_SamuraiIntro
+	trainerbattle_no_intro TRAINER_BUG_CATCHER_SAMURAI, ViridianForest_Text_SamuraiDefeat
+	msgbox ViridianForest_Text_SamuraiPostBattle
+	closemessage
+	call_if_eq VAR_TEMP_1,0, ViridianForest_Leave_Event_Samurai_Top
+	call_if_eq VAR_TEMP_1,1, ViridianForest_Leave_Event_Samurai_Middle
+	call_if_eq VAR_TEMP_1,2, ViridianForest_Leave_Event_Samurai_Bottom
+	waitmovement 0
+	removeobject LOCALID_VIRIDIANFOREST_SAMURAI
+	setflag FLAG_HIDE_VIRIDIAN_FOREST_SAMURAI
+	setvar VAR_MAP_SCENE_VIRIDIAN_FOREST, 3
+	releaseall
+	end
+
+
+
+ViridianForest_Engage_Event_Samurai_Top::
+	applymovement LOCALID_VIRIDIANFOREST_SAMURAI, ViridianForest_Engage_Movement_Samurai_Top
+	waitmovement
+	return
+	
+ViridianForest_Engage_Event_Samurai_Middle::
+	applymovement LOCALID_VIRIDIANFOREST_SAMURAI, ViridianForest_Engage_Movement_Samurai_Middle
+	waitmovement
+	return
+	
+ViridianForest_Engage_Event_Samurai_Bottom::
+	applymovement LOCALID_VIRIDIANFOREST_SAMURAI, ViridianForest_Engage_Movement_Samurai_Bottom
+	waitmovement
+	return
+
+	
+ViridianForest_Leave_Event_Samurai_Top::
+	applymovement LOCALID_VIRIDIANFOREST_SAMURAI, ViridianForest_Leave_Movement_Samurai_Top
+	waitmovement
+	return
+
+ViridianForest_Leave_Event_Samurai_Middle::
+	applymovement LOCALID_VIRIDIANFOREST_SAMURAI, ViridianForest_Leave_Movement_Samurai_Middle
+	waitmovement
+	return
+	
+ViridianForest_Leave_Event_Samurai_Bottom::
+	applymovement LOCALID_VIRIDIANFOREST_SAMURAI, ViridianForest_Leave_Movement_Samurai_Bottom
+	waitmovement
+	return
+
+
+ViridianForest_Engage_Movement_Samurai_Top::
+	reveal_trainer
+	walk_down
+	step_end
+	
+ViridianForest_Engage_Movement_Samurai_Middle::
+	reveal_trainer
+	walk_down
+	walk_down
+	step_end
+	
+ViridianForest_Engage_Movement_Samurai_Bottom::
+	reveal_trainer
+	walk_down
+	walk_down
+	walk_down
+	step_end
+
+ViridianForest_Leave_Movement_Samurai_Top::
+	walk_right
+	walk_down
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	step_end
+
+ViridianForest_Leave_Movement_Samurai_Middle::
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	step_end	
+	
+ViridianForest_Leave_Movement_Samurai_Bottom::
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	step_end	
+	
 	
 ViridianForest_EventScript_Heal::
 	lock
 	faceplayer
 	msgbox ViridianForest_Text_SamuraiHeal
-	special HealPlayerParty
+	call Common_EventScript_OutOfCenterPartyHeal
 	releaseall
 	end
 	
@@ -224,7 +343,7 @@ ViridianForest_EventScript_Neesha::
 	removeobject LOCALID_VIRIDIAN_FOREST_NEESHA
 	playse SE_EXIT
 	waitse
-	setvar VAR_MAP_SCENE_VIRIDIAN_FOREST, 3
+	setvar VAR_MAP_SCENE_VIRIDIAN_FOREST, 4
 	setflag FLAG_HIDE_VIRIDIAN_FOREST_NEESHA
 	releaseall
  	end

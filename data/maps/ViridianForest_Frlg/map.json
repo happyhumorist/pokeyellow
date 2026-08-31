@@ -39,10 +39,10 @@
       "movement_type": "MOVEMENT_TYPE_TREE_DISGUISE",
       "movement_range_x": 0,
       "movement_range_y": 0,
-      "trainer_type": "TRAINER_TYPE_BURIED",
-      "trainer_sight_or_berry_tree_id": "4",
-      "script": "ViridianForest_EventScript_Samurai",
-      "flag": "0"
+      "trainer_type": "TRAINER_TYPE_NONE",
+      "trainer_sight_or_berry_tree_id": "1",
+      "script": "NULL",
+      "flag": "FLAG_HIDE_VIRIDIAN_FOREST_SAMURAI"
     },
     {
       "local_id": "LOCALID_VIRIDIANFOREST_JAMES",
@@ -254,7 +254,7 @@
       "y": 11,
       "elevation": 0,
       "var": "VAR_MAP_SCENE_VIRIDIAN_FOREST",
-      "var_value": "2",
+      "var_value": "3",
       "script": "ViridianForest_EventScript_Neesha_Right_Trigger"
     },
     {
@@ -263,7 +263,7 @@
       "y": 11,
       "elevation": 0,
       "var": "VAR_MAP_SCENE_VIRIDIAN_FOREST",
-      "var_value": "2",
+      "var_value": "3",
       "script": "ViridianForest_EventScript_Neesha_Left_Trigger"
     },
     {
@@ -319,6 +319,33 @@
       "var": "VAR_MAP_SCENE_VIRIDIAN_FOREST",
       "var_value": "1",
       "script": "ViridianForest_EventScript_Pidgeotto"
+    },
+    {
+      "type": "trigger",
+      "x": 15,
+      "y": 25,
+      "elevation": 0,
+      "var": "VAR_MAP_SCENE_VIRIDIAN_FOREST",
+      "var_value": "2",
+      "script": "ViridianForest_EventScript_Samurai_Top_Trigger"
+    },
+    {
+      "type": "trigger",
+      "x": 15,
+      "y": 26,
+      "elevation": 0,
+      "var": "VAR_MAP_SCENE_VIRIDIAN_FOREST",
+      "var_value": "2",
+      "script": "ViridianForest_EventScript_Samurai_Middle_Trigger"
+    },
+    {
+      "type": "trigger",
+      "x": 15,
+      "y": 27,
+      "elevation": 0,
+      "var": "VAR_MAP_SCENE_VIRIDIAN_FOREST",
+      "var_value": "2",
+      "script": "ViridianForest_EventScript_Samurai_Bottom_Trigger"
     }
   ],
   "bg_events": [
