@@ -240,12 +240,29 @@ SpecialVarTest_Text_4::
 	.string "{STR_VAR_1}$"
 
 Debug_EventScript_Script_5::
+	lock
+	specialvar VAR_RESULT, PlayerGetXCoor
+	buffernumberstring STR_VAR_1, VAR_RESULT
+	specialvar VAR_RESULT, PlayerGetYCoor
+	buffernumberstring STR_VAR_2, VAR_RESULT
+	msgbox DebugText_5
 	release
 	end
+DebugText_5::
+ 	.string "{STR_VAR_1}, {STR_VAR_2}$"
 
 Debug_EventScript_Script_6::
+	lock
+	specialvar VAR_RESULT, PlayerGetYCoor
+	call_if_gt VAR_RESULT, 10, Debug6Event
 	release
 	end
+Debug6Event::
+	msgbox Debug6Text
+	closemessage
+	return
+Debug6Text::
+	.string "Y bigger than 10$"
 
 Debug_EventScript_Script_7::
 	release

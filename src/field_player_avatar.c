@@ -1527,6 +1527,16 @@ u8 PlayerGetElevation(void)
     return gObjectEvents[gPlayerAvatar.objectEventId].previousElevation;
 }
 
+u8 PlayerGetXCoor(void)
+{
+    return gObjectEvents[gPlayerAvatar.objectEventId].currentCoords.x;
+}
+
+u8 PlayerGetYCoor(void)
+{
+    return gObjectEvents[gPlayerAvatar.objectEventId].currentCoords.y;
+}
+
 // unused
 void MovePlayerToMapCoords(s16 x, s16 y)
 {

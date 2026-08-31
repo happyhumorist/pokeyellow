@@ -643,3 +643,6 @@ gSpecials::
 	def_special SweetScentWildEncounter
 	def_special GetCurrentMapWildMonHeaderId
 	def_special MapHasNoEncounterData
+	def_special PlayerGetXCoor
+	def_special PlayerGetYCoor
+	
