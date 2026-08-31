@@ -1527,6 +1527,7 @@ u8 PlayerGetElevation(void)
     return gObjectEvents[gPlayerAvatar.objectEventId].previousElevation;
 }
 
+
 u8 PlayerGetXCoor(void)
 {
     return gObjectEvents[gPlayerAvatar.objectEventId].currentCoords.x;
