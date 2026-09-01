@@ -195,7 +195,9 @@ ViridianForest_EventScript_Samurai_Bottom_Trigger::
 	end
 	
 ViridianForest_EventScript_Samurai::
-
+	applymovement LOCALID_VIRIDIANFOREST_SAMURAI, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement LOCALID_PLAYER, Common_Movement_WalkInPlaceFasterUp
 	call_if_eq VAR_TEMP_1,0, ViridianForest_Engage_Event_Samurai_Top
 	call_if_eq VAR_TEMP_1,1, ViridianForest_Engage_Event_Samurai_Middle
 	call_if_eq VAR_TEMP_1,2, ViridianForest_Engage_Event_Samurai_Bottom
